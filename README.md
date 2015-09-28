@@ -1,2 +1,2 @@
-# alphahealthcare-parent
-Parent POMs for alphahealthcare.io
+# cotiviti-parent
+Parent POMs for cotiviti.io

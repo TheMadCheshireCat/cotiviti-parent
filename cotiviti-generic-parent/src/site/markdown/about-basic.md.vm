@@ -1,0 +1,7 @@
+# About ${project.groupId}:${project.artifactId}:${project.version}
+
+This is the ${project.artifactId} project!
+
+---
+
+The generic parent is used mostly to produce assemblies without interference from specific plugins.

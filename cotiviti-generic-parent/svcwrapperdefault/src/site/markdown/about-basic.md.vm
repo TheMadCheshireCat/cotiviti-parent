@@ -1,0 +1,9 @@
+# About ${project.groupId}:${project.artifactId}:${project.version}
+
+This is is some data about this project (${project.groupId}:${project.artifactId}:${project.version})
+
+This is the ${project.artifactId} project!
+
+---
+
+This is a default that allows us to top-configure the RPMs project.  It is soon to be disposed of.

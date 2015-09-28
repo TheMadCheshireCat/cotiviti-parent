@@ -1,0 +1,7 @@
+# About ${project.groupId}:${project.artifactId}:${project.version}
+
+This is is some data about this project (${project.groupId}:${project.artifactId}:${project.version})
+
+This is the root parent for our builds.
+
+It has a number of child POMs that are also used, both internally and externally to AHC.

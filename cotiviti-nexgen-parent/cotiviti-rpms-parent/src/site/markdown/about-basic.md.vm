@@ -1,0 +1,9 @@
+# About ${project.groupId}:${project.artifactId}:${project.version}
+
+This is is some data about this project (${project.groupId}:${project.artifactId}:${project.version})
+
+This is the ${project.artifactId} project!
+
+---
+
+This is the parent that we use to build RPMs using the Deliver8r Servicewrapper and Redline plugins.

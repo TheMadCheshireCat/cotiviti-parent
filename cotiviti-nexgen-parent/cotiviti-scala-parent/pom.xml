@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>io.cotiviti</groupId>
+		<artifactId>cotiviti-nexgen-parent</artifactId>
+		<version>0.1.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>cotiviti-scala-parent</artifactId>
+	<packaging>pom</packaging>
+	<name>Cotiviti Scala Parent POM</name>
+	<description>The root parent for most scala projects.  There are possible sub-types depending on testing requirements.</description>
+	<properties>
+	</properties>
+
+	<!-- URL for site gen -->
+	<url>${ghe.url.base}/${project.artifactId}</url>
+	<scm>
+		<connection>scm:git:${git.url}</connection>
+		<url>scm:git:${git.url}</url>
+		<developerConnection>scm:git:${git.url}</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+	<dependencyManagement>
+		<dependencies>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>org.scalatest</groupId>
+			<artifactId>scalatest_${scala.minor.version}</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>net.alchim31.maven</groupId>
+				<artifactId>scala-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+							<goal>testCompile</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>src/main/scala</source>
+							</sources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>add-test-source</id>
+						<phase>generate-test-sources</phase>
+						<goals>
+							<goal>add-test-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>src/test/scala</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- <plugin> <groupId>org.scalatest</groupId> <artifactId>scalatest-maven-plugin</artifactId> 
+				</plugin> <plugin> <groupId>org.scoverage</groupId> <artifactId>scoverage-maven-plugin</artifactId> 
+				<executions> <execution> <id>check-scoverage-coverage</id> <phase>test</phase> 
+				<goals> <goal>check</goal> </goals> </execution> </executions> </plugin> -->
+		</plugins>
+	</build>
+</project>
