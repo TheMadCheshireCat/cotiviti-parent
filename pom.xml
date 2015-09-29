@@ -14,7 +14,7 @@
 	<packaging>pom</packaging>
 
 	<organization>
-		<name>Cotiviti (formerly iHealth/Connolly)</name>
+		<name>Cotiviti</name>
 		<url>http://www.cotiviti.io</url>
 	</organization>
 	<ciManagement>
@@ -38,6 +38,10 @@
 			</roles>
 		</developer>
 	</developers>
+	<issueManagement>
+		<url>${ghe.url.base}/cotiviti-parent/issues</url>
+		<system>GitHub</system>
+	</issueManagement>
 	<name>cotiviti Parent POM</name>
 	<!-- HERE WE INCLUDE ABOUT A MILLION PROPERTIES TO MAKE OUR LIVES EASIER -->
 	<description>Parent POM for Externally-facing IHT/C projects</description>
@@ -46,7 +50,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.build.timestamp.format>yyyyMMddHHmmssSSS</maven.build.timestamp.format>
 		<!-- The group on bitbucket (in case I change it later) -->
-		<team.group.id>iHealthTechnologies</team.group.id>
+		<team.group.id>cotiviti</team.group.id>
 		<jenkins.url>https://nexgen-admin.ci.cloudbees.com/job/OSS</jenkins.url>
 
 		<!-- The base URL to nexus. This is for repositories and possibly weird 
@@ -114,7 +118,7 @@
 		<maven.cobertura.version>2.7</maven.cobertura.version>
 		<joda.time.version>2.6</joda.time.version>
 		<joda.convert.version>1.7</joda.convert.version>
-		<test.coverage.percentage.required>1</test.coverage.percentage.required>
+		<test.coverage.percentage.required>95</test.coverage.percentage.required>
 		<scalatest.version>2.2.3</scalatest.version>
 		<javax.inject.version>1</javax.inject.version>
 		<fge.json.schema.validator>2.2.6</fge.json.schema.validator>
@@ -146,11 +150,11 @@
 		version -->
 	<distributionManagement>
 		<snapshotRepository>
-			<id>cotivitiossrh</id>
+			<id>cotiviti_ossrh</id>
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
 		<repository>
-			<id>cotivitiossrh</id>
+			<id>cotiviti_ossrh</id>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
 		<site>
@@ -537,6 +541,11 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-changes-plugin</artifactId>
 				<version>${maven.changes.plugin.version}</version>
+				<configuration>
+					<githubAPIScheme>https</githubAPIScheme>
+					<githubAPIPort>443</githubAPIPort>
+					<onlyMilestoneIssues>false</onlyMilestoneIssues>
+				</configuration>
 				<reportSets>
 					<reportSet>
 						<reports>
