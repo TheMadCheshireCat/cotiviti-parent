@@ -107,6 +107,7 @@
 		<maven.taglist.plugin.version>2.4</maven.taglist.plugin.version>
 		<maven.wagon.ssh.version>2.9</maven.wagon.ssh.version>
 		<maven.graph.plugin.version>1.2.3</maven.graph.plugin.version>
+		<maven.archetype.plugin.version>2.4</maven.archetype.plugin.version>
 		<redline.maven.plugin.version>0.0.4-SNAPSHOT</redline.maven.plugin.version>
 		<site.path>site/${project.version}</site.path>
 		<junit.version>4.12</junit.version>
@@ -327,6 +328,11 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-install-plugin</artifactId>
 					<version>${maven.install.plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-archetype-plugin</artifactId>
+					<version>${maven.archetype.plugin.version}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
