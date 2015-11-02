@@ -42,9 +42,9 @@
 		<url>${ghe.url.base}/cotiviti-parent/issues</url>
 		<system>GitHub</system>
 	</issueManagement>
-	<name>cotiviti Parent POM</name>
+	<name>Cotiviti Parent POM</name>
 	<!-- HERE WE INCLUDE ABOUT A MILLION PROPERTIES TO MAKE OUR LIVES EASIER -->
-	<description>Parent POM for Externally-facing IHT/C projects</description>
+	<description>Parent POM for Cotiviti projects</description>
 	<properties>
 		<GITHUB.BRANCH>master</GITHUB.BRANCH>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
