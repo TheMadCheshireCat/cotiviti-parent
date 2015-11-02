@@ -355,6 +355,12 @@
 					<artifactId>maven-eclipse-plugin</artifactId>
 					<version>${maven.eclipse.plugin.version}</version>
 				</plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-gpg-plugin</artifactId>
+                    <version>${maven.gpg.plugin.version}</version>
+                </plugin>
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
@@ -599,7 +605,7 @@
 			</build>
 		</profile>
 		<profile>
-			<id>release</id>
+			<id>release-profile</id>
 			<properties>
 				<site.path>site/${project.version}</site.path>
 			</properties>
