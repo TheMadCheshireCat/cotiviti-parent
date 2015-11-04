@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<!-- TODO Put in License here! -->
 
@@ -122,6 +123,7 @@
 		<scalatest.version>2.2.3</scalatest.version>
 		<javax.inject.version>1</javax.inject.version>
 		<fge.json.schema.validator>2.2.6</fge.json.schema.validator>
+		<jacoco.maven.plugin.version>0.7.5.201505241946</jacoco.maven.plugin.version>
 
 		<servicewrapper.maven.plugin.version>0.0.4</servicewrapper.maven.plugin.version>
 		<servicewrapper.runas.user>malvis</servicewrapper.runas.user>
@@ -133,7 +135,7 @@
 		<servicewrapper.groupId>${project.groupId}</servicewrapper.groupId>
 		<servicewrapper.artifactId>svcwrapperdefault</servicewrapper.artifactId>
 
-		<site.target.url>github:http://ihealthtechnologies.github.io/${project.artifactId}/${site.path}</site.target.url>
+		<site.target.url>github:http://cotiviti.github.io/${project.artifactId}/${site.path}</site.target.url>
 		<trajano.wagon.version>2.0.5-SNAPSHOT</trajano.wagon.version>
 	</properties>
 
@@ -235,6 +237,11 @@
 		</extensions>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>org.jacoco</groupId>
+					<artifactId>jacoco-maven-plugin</artifactId>
+					<version>${jacoco.maven.plugin.version}</version>
+				</plugin>
 				<plugin>
 					<groupId>org.sonatype.plugins</groupId>
 					<artifactId>nexus-staging-maven-plugin</artifactId>
@@ -356,11 +363,11 @@
 					<artifactId>maven-eclipse-plugin</artifactId>
 					<version>${maven.eclipse.plugin.version}</version>
 				</plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-gpg-plugin</artifactId>
-                    <version>${maven.gpg.plugin.version}</version>
-                </plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-gpg-plugin</artifactId>
+					<version>${maven.gpg.plugin.version}</version>
+				</plugin>
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
