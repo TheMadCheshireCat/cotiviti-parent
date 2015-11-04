@@ -354,10 +354,6 @@
 					<version>${maven.resources.plugin.version}</version>
 				</plugin>
 				<plugin>
-					<artifactId>maven-archetype-plugin</artifactId>
-					<version>${maven.archetype.plugin.version}</version>
-				</plugin>
-				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-eclipse-plugin</artifactId>
 					<version>${maven.eclipse.plugin.version}</version>
