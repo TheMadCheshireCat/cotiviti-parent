@@ -1,4 +1,22 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<!--
+
+    Copyright (C) ${project.inceptionYear} Mycila (mathieu.carbou@gmail.com)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<!-- TODO Put in License here! -->
 
@@ -107,6 +125,7 @@
 		<maven.wagon.ssh.version>2.9</maven.wagon.ssh.version>
 		<maven.graph.plugin.version>1.2.3</maven.graph.plugin.version>
 		<maven.archetype.plugin.version>2.4</maven.archetype.plugin.version>
+		<license.maven.plugin>2.11</license.maven.plugin>
 		<redline.maven.plugin.version>0.0.4-SNAPSHOT</redline.maven.plugin.version>
 		<site.path>site/${project.version}</site.path>
 		<junit.version>4.12</junit.version>
@@ -236,6 +255,26 @@
 		</extensions>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>com.mycila</groupId>
+					<artifactId>license-maven-plugin</artifactId>
+					<version>${license.maven.plugin}</version>
+					<configuration>
+						<header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
+						<properties>
+							<owner>Mycila</owner>
+							<email>mathieu.carbou@gmail.com</email>
+						</properties>
+						<excludes>
+							<exclude>**/*.md</exclude>
+							<exclude>**/LICENSE</exclude>
+							<exclude>**/.*</exclude>
+							<exclude>src/test/resources/**</exclude>
+							<exclude>src/main/resources/**</exclude>
+							<exclude>src/main/avro/**</exclude>
+						</excludes>
+					</configuration>
+				</plugin>
 				<plugin>
 					<groupId>org.jacoco</groupId>
 					<artifactId>jacoco-maven-plugin</artifactId>
@@ -458,6 +497,35 @@
 						</tanukisoftJSW>
 					</configuration>
 				</plugin>
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>com.mycila</groupId>
+										<artifactId>
+											license-maven-plugin
+										</artifactId>
+										<versionRange>
+											[2.11,)
+										</versionRange>
+										<goals>
+											<goal>format</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 		<resources>
@@ -473,6 +541,21 @@
 			</testResource>
 		</testResources>
 		<plugins>
+			<plugin>
+				<groupId>com.mycila</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<configuration>
+							<dryRun>false</dryRun>
+						</configuration>
+						<phase>validate</phase>
+						<goals>
+							<goal>format</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
