@@ -20,7 +20,7 @@
 	<parent>
 		<groupId>io.cotiviti</groupId>
 		<artifactId>cotiviti-nexgen-parent</artifactId>
-		<version>0.2.17</version>
+		<version>0.2.18-SNAPSHOT</version>
 	</parent>
 	<artifactId>cotiviti-scala-parent</artifactId>
 	<packaging>pom</packaging>
@@ -35,7 +35,7 @@
 		<connection>scm:git:${git.url}</connection>
 		<url>scm:git:${git.url}</url>
 		<developerConnection>scm:git:${git.url}</developerConnection>
-		<tag>cotiviti-parent-0.2.17</tag>
+		<tag>HEAD</tag>
 	</scm>
 	<dependencyManagement>
 		<dependencies>
