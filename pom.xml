@@ -686,6 +686,22 @@
 			</build>
 		</profile>
 		<profile>
+			<id>oss-sonatype</id>
+			<activation>
+				<file>
+					<exists>.cotivitisigned</exists>
+				</file>
+			</activation>
+			<build>
+				<plugins>
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
 			<id>release</id>
 			<properties>
 				<site.path>site/${project.version}</site.path>
