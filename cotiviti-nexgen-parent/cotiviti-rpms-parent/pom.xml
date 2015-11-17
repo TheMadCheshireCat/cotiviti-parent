@@ -1,6 +1,6 @@
 <!--
 
-    Copyright (C) ${project.inceptionYear} Mycila (mathieu.carbou@gmail.com)
+    Copyright (C) ${project.inceptionYear} Cotiviti Labs (nexgen.admin@cotiviti.io)
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@
 	<parent>
 		<groupId>io.cotiviti</groupId>
 		<artifactId>cotiviti-nexgen-parent</artifactId>
-		<version>0.2.9-SNAPSHOT</version>
+		<version>0.2.9</version>
 	</parent>
 	<packaging>pom</packaging>
 	<artifactId>cotiviti-rpms-parent</artifactId>
