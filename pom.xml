@@ -690,7 +690,7 @@
 			<id>oss-sonatype</id>
 			<activation>
 				<file>
-                    <exists>${session.executionRootDirectory}/.cotivitisigned</exists>
+                    <exists>${project.basedir}/.cotivitisigned</exists>
 				</file>
 			</activation>
 			<build>
