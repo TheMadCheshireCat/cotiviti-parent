@@ -28,7 +28,7 @@
 	<parent>
 		<groupId>io.cotiviti</groupId>
 		<artifactId>cotiviti-parent</artifactId>
-		<version>0.2.18-SNAPSHOT</version>
+		<version>0.2.18</version>
 	</parent>
 	<packaging>pom</packaging>
 	<artifactId>cotiviti-nexgen-parent</artifactId>
