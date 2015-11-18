@@ -345,7 +345,7 @@
 					<configuration>
 						<autoVersionSubmodules>true</autoVersionSubmodules>
 						<useReleaseProfile>true</useReleaseProfile>
-						<releaseProfiles>release</releaseProfiles>
+						<releaseProfiles>release,gpgsigning</releaseProfiles>
 						<goals>deploy</goals>
 					</configuration>
 				</plugin>
