@@ -74,7 +74,7 @@
 		<typesafe.config.version>1.2.1</typesafe.config.version>
 		<typesafe.scala.logging.version>3.1.0</typesafe.scala.logging.version>
 		<play2.version>2.4.1</play2.version>
-		<play2.maven.plugin.version>1.0.0-beta1</play2.maven.plugin.version>
+		<play2.maven.plugin.version>1.0.0-beta3</play2.maven.plugin.version>
 		<kamon.version>0.3.5</kamon.version>
 		<slf4j.version>1.7.9</slf4j.version>
 		<sesame.version>2.8.3</sesame.version>
