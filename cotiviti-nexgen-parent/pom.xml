@@ -1,21 +1,13 @@
-<!--
-
-    Copyright (C) 2015 Cotiviti Labs (nexgen.admin@cotiviti.io)
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-            http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-
--->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<!-- Copyright (C) 2015 Cotiviti Labs (nexgen.admin@cotiviti.io) Licensed 
+	under the Apache License, Version 2.0 (the "License"); you may not use this 
+	file except in compliance with the License. You may obtain a copy of the 
+	License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by 
+	applicable law or agreed to in writing, software distributed under the License 
+	is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY 
+	KIND, either express or implied. See the License for the specific language 
+	governing permissions and limitations under the License. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>io.cotiviti</groupId>
@@ -102,7 +94,7 @@
 		<scalarx.version>0.2.6</scalarx.version>
 		<fusesource.sigar.version>1.6.4</fusesource.sigar.version>
 		<ficus.version>1.1.2</ficus.version>
-		<apache.poi.version>3.11</apache.poi.version>
+		<apache.poi.version>3.13</apache.poi.version>
 		<trove4j.version>3.0.3</trove4j.version>
 		<jsoup.version>1.8.1</jsoup.version>
 		<java.websocket.version>1.3.0</java.websocket.version>
@@ -317,6 +309,17 @@
 			<dependency>
 				<groupId>com.typesafe.play</groupId>
 				<artifactId>play-netty-server_${scala.minor.version}</artifactId>
+				<version>${play2.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.typesafe.play</groupId>
+				<artifactId>play-ws_${scala.minor.version}</artifactId>
+				<version>${play2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.typesafe.play</groupId>
+				<artifactId>play-cache_${scala.minor.version}</artifactId>
 				<version>${play2.version}</version>
 			</dependency>
 
@@ -910,6 +913,7 @@
 	</build>
 	<modules>
 		<module>cotiviti-scala-parent</module>
+		<module>cotiviti-play2-parent</module>
 		<module>cotiviti-rpms-parent</module>
 	</modules>
 </project>

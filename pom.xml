@@ -1,21 +1,21 @@
-<!--
-
-    Copyright (C) 2015 Cotiviti Labs (nexgen.admin@cotiviti.io)
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-            http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-
--->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<!-- Copyright (C) 2015 Cotiviti Labs (nexgen.admin@cotiviti.io) Licensed 
+	under the Apache License, Version 2.0 (the "License"); you may not use this 
+	file except in compliance with the License. You may obtain a copy of the 
+	License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by 
+	applicable law or agreed to in writing, software distributed under the License 
+	is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY 
+	KIND, either express or implied. See the License for the specific language 
+	governing permissions and limitations under the License. -->
+<!-- Copyright (C) 2015 Cotiviti Labs (nexgen.admin@cotiviti.io) Licensed 
+	under the Apache License, Version 2.0 (the "License"); you may not use this 
+	file except in compliance with the License. You may obtain a copy of the 
+	License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by 
+	applicable law or agreed to in writing, software distributed under the License 
+	is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY 
+	KIND, either express or implied. See the License for the specific language 
+	governing permissions and limitations under the License. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<!-- TODO Put in License here! -->
 
@@ -45,7 +45,7 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-    <inceptionYear>2015</inceptionYear>
+	<inceptionYear>2015</inceptionYear>
 	<developers>
 		<developer>
 			<id>admin</id>
@@ -125,6 +125,8 @@
 		<maven.wagon.ssh.version>2.9</maven.wagon.ssh.version>
 		<maven.graph.plugin.version>1.2.3</maven.graph.plugin.version>
 		<maven.archetype.plugin.version>2.4</maven.archetype.plugin.version>
+		<maven.war.plugin.version>2.6</maven.war.plugin.version>
+		<maven.download.plugin.version>1.2.1</maven.download.plugin.version>
 		<license.maven.plugin>2.11</license.maven.plugin>
 		<redline.maven.plugin.version>0.0.4-SNAPSHOT</redline.maven.plugin.version>
 		<site.path>site/${project.version}</site.path>
@@ -256,6 +258,16 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>${maven.war.plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>com.googlecode.maven-download-plugin</groupId>
+					<artifactId>download-maven-plugin</artifactId>
+					<version>${maven.download.plugin.version}</version>
+				</plugin>
+				<plugin>
 					<groupId>com.mycila</groupId>
 					<artifactId>license-maven-plugin</artifactId>
 					<version>${license.maven.plugin}</version>
@@ -266,7 +278,7 @@
 							<email>nexgen.admin@cotiviti.io</email>
 						</properties>
 						<excludes>
-							<!--  TODO Fix licensing for .md and avro. -->
+							<!-- TODO Fix licensing for .md and avro. -->
 							<exclude>**/*.md</exclude>
 							<exclude>**/LICENSE</exclude>
 							<exclude>**/.*</exclude>
@@ -499,7 +511,8 @@
 						</tanukisoftJSW>
 					</configuration>
 				</plugin>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
@@ -692,17 +705,17 @@
 			<id>oss-sonatype</id>
 			<activation>
 				<file>
-                    <exists>.cotivitisigned</exists>
+					<exists>.cotivitisigned</exists>
 				</file>
 			</activation>
 			<build>
 				<plugins>
-                    <plugin>
-                        <groupId>org.sonatype.plugins</groupId>
-                        <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <configuration>
-                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                        </configuration>
+					<plugin>
+						<groupId>org.sonatype.plugins</groupId>
+						<artifactId>nexus-staging-maven-plugin</artifactId>
+						<configuration>
+							<autoReleaseAfterClose>true</autoReleaseAfterClose>
+						</configuration>
 					</plugin>
 				</plugins>
 			</build>
@@ -761,5 +774,6 @@
 	<modules>
 		<module>cotiviti-generic-parent</module>
 		<module>cotiviti-nexgen-parent</module>
+		<module>cotiviti-play2-parent</module>
 	</modules>
 </project>

@@ -1,0 +1,175 @@
+<!--
+
+    Copyright (C) 2015 Cotiviti Labs (nexgen.admin@cotiviti.io)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>io.cotiviti</groupId>
+		<artifactId>cotiviti-nexgen-parent</artifactId>
+		<version>0.2.21-SNAPSHOT</version>
+	</parent>
+	<artifactId>cotiviti-play2-parent</artifactId>
+	<packaging>pom</packaging>
+	<name>Cotiviti Play2 Parent POM</name>
+	<description>The root parent for platy2 projects.</description>
+	<properties>
+		<play2.plugin.version>1.0.0-beta3</play2.plugin.version>
+	</properties>
+
+	<!-- URL for site gen -->
+	<url>${ghe.url.base}/${project.artifactId}</url>
+	<scm>
+		<connection>scm:git:${git.url}</connection>
+		<url>scm:git:${git.url}</url>
+		<developerConnection>scm:git:${git.url}</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+	<dependencyManagement>
+		<dependencies>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>org.scalatest</groupId>
+			<artifactId>scalatest_${scala.minor.version}</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<sourceDirectory>${project.basedir}/app</sourceDirectory>
+		<testSourceDirectory>${project.basedir}/test</testSourceDirectory>
+		<resources>
+			<resource>
+				<directory>${project.basedir}/conf</directory>
+			</resource>
+			<resource>
+				<directory>${project.basedir}/public</directory>
+				<targetPath>public</targetPath>
+			</resource>
+		</resources>
+
+		<pluginManagement>
+			<plugin>
+				<groupId>com.google.code.play2-maven-plugin</groupId>
+				<artifactId>play2-maven-plugin</artifactId>
+				<version>1.0.0-beta4-SNAPSHOT</version>
+				<extensions>true</extensions>
+				<configuration>
+					<!-- only if using database evolutions -->
+					<serverJvmArgs>-DapplyEvolutions.default=true</serverJvmArgs>
+				</configuration>
+				<executions>
+					<!-- only if there are assets in the project -->
+					<execution>
+						<id>default-play2-compile-assets</id>
+						<goals>
+							<goal>closure-compile</goal> <!-- only if precompiling js assets -->
+							<goal>coffee-compile</goal> <!-- only if precompiling coffee assets -->
+							<goal>less-compile</goal> <!-- only if precompiling less assets -->
+						</goals>
+					</execution>
+					<!-- only if enhancement is required -->
+					<execution>
+						<id>default-play2-enhance</id>
+						<goals>
+							<goal>enhance</goal>
+							<goal>ebean-enhance</goal> <!-- only if using Ebean -->
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>com.google.code.sbt-compiler-maven-plugin</groupId>
+				<artifactId>sbt-compiler-maven-plugin</artifactId>
+				<version>1.0.0-beta6</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+					<primaryArtifact>false</primaryArtifact>
+					<warSourceDirectory>${project.basedir}/war</warSourceDirectory>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-war</id>
+						<phase>package</phase>
+						<goals>
+							<goal>war</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-war</id>
+						<phase>package</phase>
+						<goals>
+							<goal>attach-artifact</goal>
+						</goals>
+						<configuration>
+							<artifacts>
+								<artifact>
+									<file>${project.build.directory}/${project.build.finalName}.war</file>
+									<type>war</type>
+								</artifact>
+							</artifacts>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</pluginManagement>
+	</build>
+	<profiles>
+		<profile>
+			<id>eclipse</id>
+
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<configuration>
+							<skipMain>true</skipMain>
+							<skip>true</skip>
+						</configuration>
+						<executions>
+							<execution>
+								<id>default-compile</id>
+								<goals>
+									<goal>compile</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>default-testCompile</id>
+								<goals>
+									<goal>testCompile</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>
