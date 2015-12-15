@@ -26,7 +26,7 @@
 		<wagon.version>2.8</wagon.version>
 
 		<sbt-compiler.plugin.version>1.0.0-beta5</sbt-compiler.plugin.version>
-		<scoverage.maven.plugin.version>1.0.5</scoverage.maven.plugin.version>
+		<scoverage.maven.plugin.version>1.1.1</scoverage.maven.plugin.version>
 		<scoverage.scalac.plugin.version>1.1.0</scoverage.scalac.plugin.version>
 		<scoverage.maven.plugin.failOnMinimumCoverage>false</scoverage.maven.plugin.failOnMinimumCoverage>
 		<scalatest.maven.plugin.version>1.0</scalatest.maven.plugin.version>
