@@ -23,6 +23,7 @@
 	<!-- A reasonable base group -->
 	<groupId>io.cotiviti</groupId>
 
+
 	<!-- We set the artifactId to be the name of the git repo. No exceptions! -->
 	<artifactId>cotiviti-parent</artifactId>
 
@@ -129,6 +130,8 @@
 		<maven.war.plugin.version>2.6</maven.war.plugin.version>
 		<maven.download.plugin.version>1.2.1</maven.download.plugin.version>
 		<license.maven.plugin>2.11</license.maven.plugin>
+		<license.cotiviti.email>nexgen.admin@cotiviti.io</license.cotiviti.email>
+		<license.cotiviti.name>Cotiviti Labs</license.cotiviti.name>
 		<redline.maven.plugin.version>0.0.4-SNAPSHOT</redline.maven.plugin.version>
 		<site.path>site/${project.version}</site.path>
 		<junit.version>4.12</junit.version>
@@ -274,10 +277,15 @@
 					<version>${license.maven.plugin}</version>
 					<configuration>
 						<header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
+						<keywords>
+							<keyword>Copyright</keyword>
+							<keyword>${license.cotiviti.email}</keyword>
+						</keywords>
 						<skipExistingHeaders>true</skipExistingHeaders>
+						<strictCheck>true</strictCheck>
 						<properties>
-							<owner>Cotiviti Labs</owner>
-							<email>nexgen.admin@cotiviti.io</email>
+							<owner>${license.cotiviti.name}</owner>
+							<email>${license.cotiviti.email}</email>
 						</properties>
 						<excludes>
 							<!-- TODO Fix licensing for .md and avro. -->

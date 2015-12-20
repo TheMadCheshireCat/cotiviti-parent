@@ -923,6 +923,7 @@
 	<modules>
 		<module>cotiviti-scala-parent</module>
 		<module>cotiviti-play2-parent</module>
+		<module>cotiviti-node-parent</module>
 		<module>cotiviti-rpms-parent</module>
 	</modules>
 </project>
