@@ -15,7 +15,8 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<!-- TODO Put in License here! -->
 
@@ -95,7 +96,7 @@
 		<maven.deploy.plugin.version>2.8.2</maven.deploy.plugin.version>
 		<maven.install.plugin.version>2.5.2</maven.install.plugin.version>
 		<maven.surefire.plugin.version>2.19</maven.surefire.plugin.version>
-		<maven.compiler.plugin.version>3.2</maven.compiler.plugin.version>
+		<maven.compiler.plugin.version>3.3</maven.compiler.plugin.version>
 		<maven.source.plugin.version>2.4</maven.source.plugin.version>
 		<maven.compiler.jdk.version>1.8</maven.compiler.jdk.version>
 		<maven.assembly.plugin.version>2.5.3</maven.assembly.plugin.version>
@@ -247,7 +248,6 @@
 				<artifactId>wagon-ssh</artifactId>
 				<version>${maven.wagon.ssh.version}</version>
 			</dependency>
-
 		</dependencies>
 	</dependencyManagement>
 
