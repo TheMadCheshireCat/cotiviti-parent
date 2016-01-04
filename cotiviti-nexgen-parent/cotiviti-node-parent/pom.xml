@@ -59,27 +59,6 @@
 						<workingDirectory>${project.build.directory}/node</workingDirectory>
 					</configuration>
 				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>build-helper-maven-plugin</artifactId>
-					<executions>
-						<execution>
-							<id>attach-war</id>
-							<phase>package</phase>
-							<goals>
-								<goal>attach-artifact</goal>
-							</goals>
-							<configuration>
-								<artifacts>
-									<artifact>
-										<file>${project.build.directory}/node</file>
-										<type>war</type>
-									</artifact>
-								</artifacts>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
