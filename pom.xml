@@ -98,7 +98,7 @@
 		<maven.compiler.plugin.version>3.3</maven.compiler.plugin.version>
 		<maven.source.plugin.version>2.4</maven.source.plugin.version>
 		<maven.compiler.jdk.version>1.8</maven.compiler.jdk.version>
-		<maven.assembly.plugin.version>2.5.3</maven.assembly.plugin.version>
+		<maven.assembly.plugin.version>2.6</maven.assembly.plugin.version>
 		<maven.eclipse.plugin.version>2.9</maven.eclipse.plugin.version>
 		<maven.resources.plugin.version>2.7</maven.resources.plugin.version>
 		<maven.pax.plugin.version>1.5</maven.pax.plugin.version>
@@ -131,11 +131,11 @@
 		<license.maven.plugin>2.11</license.maven.plugin>
 		<license.cotiviti.email>nexgen.admin@cotiviti.io</license.cotiviti.email>
 		<license.cotiviti.name>Cotiviti Labs</license.cotiviti.name>
-		<redline.maven.plugin.version>0.0.4-SNAPSHOT</redline.maven.plugin.version>
+		<redline.maven.plugin.version>0.0.4</redline.maven.plugin.version>
 		<site.path>site/${project.version}</site.path>
 		<junit.version>4.12</junit.version>
 		<spring.version>4.1.4.RELEASE</spring.version>
-		<spring.boot.version>1.2.2.RELEASE</spring.boot.version>
+		<spring.boot.version>1.3.2.RELEASE</spring.boot.version>
 		<jackson.databind.version>2.5.1</jackson.databind.version>
 		<commons.beanutils.version>1.9.1</commons.beanutils.version>
 		<json.version>20141113</json.version>
@@ -149,7 +149,7 @@
 		<jacoco.maven.plugin.version>0.7.5.201505241946</jacoco.maven.plugin.version>
 
 		<servicewrapper.maven.plugin.version>0.0.4</servicewrapper.maven.plugin.version>
-		<servicewrapper.runas.user>malvis</servicewrapper.runas.user>
+		<servicewrapper.runas.user>cotiviti</servicewrapper.runas.user>
 		<servicewrapper.install.root>/opt/${servicewrapper.artifactId}/</servicewrapper.install.root>
 		<servicewrapper.java.home>/usr/java/default</servicewrapper.java.home>
 		<servicewrapper.os.bits>64</servicewrapper.os.bits>

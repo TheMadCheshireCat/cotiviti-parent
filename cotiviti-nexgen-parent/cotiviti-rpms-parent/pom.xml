@@ -31,6 +31,7 @@
 		<servicewrapper.artifact.version>${project.version}</servicewrapper.artifact.version>
 		<rpm.unpack.dir>${project.build.directory}/unpacked</rpm.unpack.dir>
 		<maven.build.timestamp.format>yyyyMMddHHmmssSSS</maven.build.timestamp.format>
+		<jdk.rpm.version>1.8.0_31</jdk.rpm.version>
 	</properties>
 	<build>
 		<pluginManagement>
@@ -57,8 +58,8 @@
 						</platform>
 						<rpmDependencies>
 							<rpmDependency>
-								<name>jdk1.8.0_31</name>
-								<version>1.8.0_31-fcs.x86_64</version>
+								<name>jdk${jdk.rpm.version}</name>
+								<version>${jdk.rpm.version}-fcs.x86_64</version>
 							</rpmDependency>
 						</rpmDependencies>
 						<mappingDefaults>
