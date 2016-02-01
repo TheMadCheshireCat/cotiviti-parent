@@ -66,8 +66,8 @@
 		<coveralls.maven.plugin.version>3.0.1</coveralls.maven.plugin.version>
 		<coveralls.repoToken>?X?X?XX?</coveralls.repoToken>
 		<akka.version>2.3.10</akka.version>
-		<akka.http.version>1.0</akka.http.version>
-		<akka.stream.version>1.0</akka.stream.version>
+		<akka.http.version>2.0.2</akka.http.version>
+		<akka.stream.version>2.0.2</akka.stream.version>
 		<akka.inmemory.persistence.version>0.2.1</akka.inmemory.persistence.version>
 		<akka.persistence.testkit.version>0.3.4</akka.persistence.testkit.version>
 		<akka.persistence.cassandra.version>0.3.5</akka.persistence.cassandra.version>
