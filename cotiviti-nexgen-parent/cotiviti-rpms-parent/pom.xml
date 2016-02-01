@@ -31,7 +31,7 @@
 		<servicewrapper.artifact.version>${project.version}</servicewrapper.artifact.version>
 		<rpm.unpack.dir>${project.build.directory}/unpacked</rpm.unpack.dir>
 		<maven.build.timestamp.format>yyyyMMddHHmmssSSS</maven.build.timestamp.format>
-		<jdk.rpm.version>1.8.0_31</jdk.rpm.version>
+		<jdk.rpm.version>1.8.0_72</jdk.rpm.version>
 	</properties>
 	<build>
 		<pluginManagement>
