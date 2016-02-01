@@ -26,7 +26,7 @@
 	<!-- We set the artifactId to be the name of the git repo. No exceptions! -->
 	<artifactId>cotiviti-parent</artifactId>
 
-	<version>0.2.24-SNAPSHOT</version>
+	<version>0.2.24</version>
 
 	<packaging>pom</packaging>
 
@@ -168,7 +168,7 @@
 		<connection>scm:git:${git.http.url}</connection>
 		<url>${git.http.url}/tree/${GITHUB.BRANCH}</url>
 		<developerConnection>scm:git:${git.url}</developerConnection>
-		<tag>HEAD</tag>
+		<tag>cotiviti-parent-0.2.24</tag>
 	</scm>
 
 	<!-- Currently nothing for site deployments, but that's coming in a future 
