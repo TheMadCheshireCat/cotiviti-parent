@@ -148,12 +148,12 @@
 		<fge.json.schema.validator>2.2.6</fge.json.schema.validator>
 		<jacoco.maven.plugin.version>0.7.5.201505241946</jacoco.maven.plugin.version>
 
-		<servicewrapper.maven.plugin.version>0.0.4</servicewrapper.maven.plugin.version>
+		<servicewrapper.maven.plugin.version>0.0.5</servicewrapper.maven.plugin.version>
 		<servicewrapper.runas.user>cotiviti</servicewrapper.runas.user>
 		<servicewrapper.install.root>/opt/${servicewrapper.artifactId}/</servicewrapper.install.root>
 		<servicewrapper.java.home>/usr/java/default</servicewrapper.java.home>
 		<servicewrapper.os.bits>64</servicewrapper.os.bits>
-		<servicewrapper.version>3.5.26</servicewrapper.version>
+		<servicewrapper.version>3.5.28</servicewrapper.version>
 		<servicewrapper.classifier>community</servicewrapper.classifier>
 		<servicewrapper.groupId>${project.groupId}</servicewrapper.groupId>
 		<servicewrapper.artifactId>svcwrapperdefault</servicewrapper.artifactId>
