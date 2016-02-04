@@ -15,7 +15,8 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>io.cotiviti</groupId>
@@ -32,6 +33,7 @@
 		<rpm.unpack.dir>${project.build.directory}/unpacked</rpm.unpack.dir>
 		<maven.build.timestamp.format>yyyyMMddHHmmssSSS</maven.build.timestamp.format>
 		<jdk.rpm.version>1.8.0_72</jdk.rpm.version>
+		<takipi.rpm.version>3.20.9-1</takipi.rpm.version>
 	</properties>
 	<build>
 		<pluginManagement>
@@ -117,6 +119,14 @@
 							</env>
 
 							<java>
+								<!--  Setting the java executable is a pain.  Just set java home and be done with it 
+										unless you've got a really weird java executable -->
+								<!-- <command>
+									<command>
+										<directory>%JAVA_HOME%/bin</directory>
+										<file>java</file>
+									</command> 
+								</command> -->
 								<classPath>
 									<entries>
 										<entry>

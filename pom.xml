@@ -148,7 +148,7 @@
 		<fge.json.schema.validator>2.2.6</fge.json.schema.validator>
 		<jacoco.maven.plugin.version>0.7.5.201505241946</jacoco.maven.plugin.version>
 
-		<servicewrapper.maven.plugin.version>0.0.5</servicewrapper.maven.plugin.version>
+		<servicewrapper.maven.plugin.version>0.0.6-SNAPSHOT</servicewrapper.maven.plugin.version>
 		<servicewrapper.runas.user>cotiviti</servicewrapper.runas.user>
 		<servicewrapper.install.root>/opt/${servicewrapper.artifactId}/</servicewrapper.install.root>
 		<servicewrapper.java.home>/usr/java/default</servicewrapper.java.home>
@@ -494,12 +494,6 @@
 								<INSTALL_ROOT>${servicewrapper.install.root}</INSTALL_ROOT>
 							</env>
 							<java>
-								<command>
-									<command>
-										<directory>/bin</directory>
-										<file>java</file>
-									</command>
-								</command>
 								<pidFile>
 									<directory>/var/run/${servicewrapper.artifactId}</directory>
 									<file>${servicewrapper.artifactId}.pid</file>
