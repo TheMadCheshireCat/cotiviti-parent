@@ -131,7 +131,7 @@
 		<license.maven.plugin>2.11</license.maven.plugin>
 		<license.cotiviti.email>nexgen.admin@cotiviti.io</license.cotiviti.email>
 		<license.cotiviti.name>Cotiviti Labs</license.cotiviti.name>
-		<redline.maven.plugin.version>0.0.5-SNAPSHOT</redline.maven.plugin.version>
+		<redline.maven.plugin.version>0.0.5</redline.maven.plugin.version>
 		<site.path>site/${project.version}</site.path>
 		<junit.version>4.12</junit.version>
 		<spring.version>4.1.4.RELEASE</spring.version>
