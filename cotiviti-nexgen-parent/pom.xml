@@ -194,7 +194,7 @@
 			</dependency>
 			<dependency>
 				<groupId>com.scalarx</groupId>
-				<artifactId>scalarx</artifactId>
+				<artifactId>scalarx_${scala.minor.version}</artifactId>
 				<version>${scalarx.version}</version>
 			</dependency>
 			<dependency>
