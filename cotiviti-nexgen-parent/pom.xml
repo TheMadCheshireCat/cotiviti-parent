@@ -94,7 +94,7 @@
 		<lambdaworks.jacks.version>2.3.3</lambdaworks.jacks.version>
 		<json4s.version>3.2.11</json4s.version>
 		<apache.jena.version>2.13.0</apache.jena.version>
-		<io.argonaut.version>6.1-M4</io.argonaut.version>
+		<io.argonaut.version>6.1</io.argonaut.version>
 		<scalaj.http.version>1.1.4</scalaj.http.version>
 		<aspectj.version>1.8.4</aspectj.version>
 		<apache.shiro.version>1.2.3</apache.shiro.version>
