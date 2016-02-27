@@ -62,7 +62,7 @@
 		<commons.beanutils.version>1.9.1</commons.beanutils.version>
 
 		<mysql.connector.version>5.1.34</mysql.connector.version>
-		<scalastyle.maven.plugin.version>0.1.0</scalastyle.maven.plugin.version>
+		<scalastyle.maven.plugin.version>0.8.0</scalastyle.maven.plugin.version>
 		<coveralls.maven.plugin.version>3.0.1</coveralls.maven.plugin.version>
 		<coveralls.repoToken>?X?X?XX?</coveralls.repoToken>
 		<akka.version>2.3.10</akka.version>
