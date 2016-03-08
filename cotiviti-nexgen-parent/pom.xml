@@ -885,10 +885,9 @@
 						<args>
 							<arg>-unchecked</arg>
 							<arg>-deprecation</arg>
+	                                                <arg>-feature</arg>
 							<arg>-Xlint</arg>
-							<!-- <arg>–Xfatal-warnings</arg> -->
 							<arg>-Ywarn-dead-code</arg>
-							<arg>-language:_</arg>
 							<arg>-target:jvm-${maven.compiler.jdk.version}</arg>
 						</args>
 					</configuration>
@@ -945,4 +944,3 @@
 		<module>cotiviti-rpms-parent</module>
 	</modules>
 </project>
-
