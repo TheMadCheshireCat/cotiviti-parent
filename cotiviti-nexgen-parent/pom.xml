@@ -39,7 +39,7 @@
 		<scoverage.maven.plugin.failOnMinimumCoverage>true</scoverage.maven.plugin.failOnMinimumCoverage>
 		<scalatest.maven.plugin.version>1.0</scalatest.maven.plugin.version>
 		<scala.minor.version>2.11</scala.minor.version>
-		<scala.release>7</scala.release>
+		<scala.release>8</scala.release>
 		<logstash.logback.encoder.version>4.3</logstash.logback.encoder.version>
 
 
