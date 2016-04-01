@@ -171,6 +171,7 @@
 		<apache.commons.lang.version>2.6</apache.commons.lang.version>
 		<apache.commons.lang3.version>3.4</apache.commons.lang3.version>
 
+		<avro.core.version>1.8.0</avro.core.version>
 	</properties>
 
 	<!-- URL for site gen -->
