@@ -128,7 +128,6 @@
 		<fge.json.schema.validator>2.2.6</fge.json.schema.validator>
 		<jackson.version>2.5.1</jackson.version>
 		<vertx.version>3.2.0</vertx.version>
-		<avro.core.version>1.8.0</avro.core.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
