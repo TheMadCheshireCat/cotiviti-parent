@@ -26,7 +26,7 @@
 	<!-- We set the artifactId to be the name of the git repo. No exceptions! -->
 	<artifactId>cotiviti-parent</artifactId>
 
-	<version>0.3.2-SNAPSHOT</version>
+	<version>0.3.3-SNAPSHOT</version>
 
 	<packaging>pom</packaging>
 
@@ -172,6 +172,7 @@
 		<apache.commons.lang.version>2.6</apache.commons.lang.version>
 		<apache.commons.lang3.version>3.4</apache.commons.lang3.version>
 
+		<avro.core.version>1.8.0</avro.core.version>
 	</properties>
 
 	<!-- URL for site gen -->
