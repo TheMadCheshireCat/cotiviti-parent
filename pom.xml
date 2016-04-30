@@ -94,7 +94,6 @@
 		<maven.jar.plugin.version>2.6</maven.jar.plugin.version>
 		<maven.deploy.plugin.version>2.8.2</maven.deploy.plugin.version>
 		<maven.install.plugin.version>2.5.2</maven.install.plugin.version>
-		<maven.surefire.plugin.version>2.19</maven.surefire.plugin.version>
 		<maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
 		<maven.source.plugin.version>2.4</maven.source.plugin.version>
 		<maven.compiler.jdk.version>1.8</maven.compiler.jdk.version>
@@ -129,6 +128,8 @@
 		<maven.archetype.plugin.version>2.4</maven.archetype.plugin.version>
 		<maven.war.plugin.version>2.6</maven.war.plugin.version>
 		<maven.download.plugin.version>1.2.1</maven.download.plugin.version>
+		<maven.surefire.plugin.version>2.19.1</maven.surefire.plugin.version>
+		<maven.failsafe.plugin.version>2.19.1</maven.failsafe.plugin.version>
 		<license.maven.plugin>2.11</license.maven.plugin>
 		<license.cotiviti.email>nexgen.admin@cotiviti.io</license.cotiviti.email>
 		<license.cotiviti.name>Cotiviti Labs</license.cotiviti.name>
@@ -647,6 +648,10 @@
 	</build>
 	<reporting>
 		<plugins>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
