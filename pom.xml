@@ -15,7 +15,8 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<!-- TODO Put in License here! -->
 
@@ -130,6 +131,7 @@
 		<maven.download.plugin.version>1.2.1</maven.download.plugin.version>
 		<maven.surefire.plugin.version>2.19.1</maven.surefire.plugin.version>
 		<maven.failsafe.plugin.version>2.19.1</maven.failsafe.plugin.version>
+		<kotlin.version>1.0.1-2</kotlin.version>
 		<license.maven.plugin>2.11</license.maven.plugin>
 		<license.cotiviti.email>nexgen.admin@cotiviti.io</license.cotiviti.email>
 		<license.cotiviti.name>Cotiviti Labs</license.cotiviti.name>
@@ -205,6 +207,11 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
+				<groupId>org.jetbrains.kotlin</groupId>
+				<artifactId>kotlin-stdlib</artifactId>
+				<version>${kotlin.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>javax.inject</groupId>
 				<artifactId>javax.inject</artifactId>
 				<version>${javax.inject.version}</version>
@@ -277,6 +284,25 @@
 		</extensions>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<artifactId>kotlin-maven-plugin</artifactId>
+					<groupId>org.jetbrains.kotlin</groupId>
+					<version>${kotlin.version}</version>
+					<executions>
+						<execution>
+							<id>kotlin-compile</id>
+							<goals>
+								<goal>compile</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>kotlin-test-compile</id>
+							<goals>
+								<goal>test-compile</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-war-plugin</artifactId>
