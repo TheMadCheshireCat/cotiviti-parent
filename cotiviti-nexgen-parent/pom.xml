@@ -130,6 +130,8 @@
 		<jackson.version>2.5.1</jackson.version>
 		<vertx.version>3.2.0</vertx.version>
 		<avro.core.version>1.8.0</avro.core.version>
+		<tika.version>1.13</tika.version>
+		<validation.api.version>1.1.0.Final</validation.api.version>
 		<jacoco.version>0.7.6.201602180812</jacoco.version>
 		<jacoco.it.execution.data.file>${project.build.directory}/jacoco-it.exec</jacoco.it.execution.data.file>
 		<jacoco.it.execution.dest.file>${jacoco.it.execution.data.file}</jacoco.it.execution.dest.file>
@@ -140,6 +142,16 @@
 	</properties>
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>javax.validation</groupId>
+				<artifactId>validation-api</artifactId>
+				<version>${validation.api.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.tika</groupId>
+				<artifactId>tika-core</artifactId>
+				<version>${tika.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>com.github.zafarkhaja</groupId>
 				<artifactId>java-semver</artifactId>
