@@ -142,7 +142,7 @@
 		<spring.boot.version>1.3.3.RELEASE</spring.boot.version>
 		<jackson.databind.version>2.5.1</jackson.databind.version>
 		<commons.beanutils.version>1.9.1</commons.beanutils.version>
-		<json.version>20141113</json.version>
+		<json.version>20160212</json.version>
 		<maven.cobertura.version>2.7</maven.cobertura.version>
 		<joda.time.version>2.6</joda.time.version>
 		<joda.convert.version>1.7</joda.convert.version>
