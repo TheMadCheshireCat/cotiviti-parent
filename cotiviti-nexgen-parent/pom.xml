@@ -80,7 +80,7 @@
 		<sesame.version>2.8.3</sesame.version>
 		<scalaz.version>7.1.0</scalaz.version>
 		<spray.version>1.3.3</spray.version>
-		<spray.json.version>1.3.1</spray.json.version>
+		<spray.json.version>1.3.2</spray.json.version>
 		<webjars.ink.version>3.1.2</webjars.ink.version>
 		<webjars.emberjs.version>1.9.0</webjars.emberjs.version>
 		<webjars.handlebars.version>2.0.0</webjars.handlebars.version>
