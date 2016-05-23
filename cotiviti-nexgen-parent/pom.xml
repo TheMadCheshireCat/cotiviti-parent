@@ -93,7 +93,6 @@
 		<logback.version>1.1.2</logback.version>
 		<lambdaworks.jacks.version>2.3.3</lambdaworks.jacks.version>
 		<json4s.version>3.2.11</json4s.version>
-		<apache.jena.version>2.13.0</apache.jena.version>
 		<io.argonaut.version>6.1</io.argonaut.version>
 		<scalaj.http.version>1.1.4</scalaj.http.version>
 		<aspectj.version>1.8.4</aspectj.version>
@@ -122,7 +121,6 @@
 		<apache.curator.version>2.7.1</apache.curator.version>
 		<google.guava.version>18.0</google.guava.version>
 		<json4s.native.version>3.2.11</json4s.native.version>
-		<jena.version>2.13.0</jena.version>
 		<fge.json.schema.validator>2.2.6</fge.json.schema.validator>
 		<jackson.version>2.5.1</jackson.version>
 		<vertx.version>3.2.0</vertx.version>
@@ -309,22 +307,6 @@
 				<groupId>org.parboiled</groupId>
 				<artifactId>parboiled-scala_${scala.minor.version}</artifactId>
 				<version>${parboiled.scala.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.jena</groupId>
-				<artifactId>apache-jena-libs</artifactId>
-				<version>${apache.jena.version}</version>
-				<type>pom</type>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.jena</groupId>
-				<artifactId>jena-core</artifactId>
-				<version>${apache.jena.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.jena</groupId>
-				<artifactId>jena-arq</artifactId>
-				<version>${apache.jena.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.github.fge</groupId>
