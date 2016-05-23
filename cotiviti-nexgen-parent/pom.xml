@@ -71,9 +71,6 @@
 		<akka.version>2.3.10</akka.version>
 		<akka.http.version>2.0.2</akka.http.version>
 		<akka.stream.version>2.0.2</akka.stream.version>
-		<akka.inmemory.persistence.version>0.2.1</akka.inmemory.persistence.version>
-		<akka.persistence.testkit.version>0.3.4</akka.persistence.testkit.version>
-		<akka.persistence.cassandra.version>0.3.5</akka.persistence.cassandra.version>
 		<typesafe.config.version>1.2.1</typesafe.config.version>
 		<typesafe.scala.logging.version>3.1.0</typesafe.scala.logging.version>
 		<play2.version>2.4.1</play2.version>
@@ -333,24 +330,6 @@
 				<groupId>com.github.fge</groupId>
 				<artifactId>json-schema-validator</artifactId>
 				<version>${fge.json.schema.validator}</version>
-			</dependency>
-
-			<dependency>
-				<version>${akka.persistence.cassandra.version}</version>
-				<groupId>com.github.krasserm</groupId>
-				<artifactId>akka-persistence-cassandra_${scala.minor.version}</artifactId>
-				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>com.github.krasserm</groupId>
-				<artifactId>akka-persistence-testkit_${scala.minor.version}</artifactId>
-				<version>${akka.persistence.testkit.version}</version>
-				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>com.github.michaelpisula</groupId>
-				<artifactId>akka-persistence-inmemory_${scala.minor.version}</artifactId>
-				<version>${akka.inmemory.persistence.version}</version>
 			</dependency>
 
 			<dependency>
