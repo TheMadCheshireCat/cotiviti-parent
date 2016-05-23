@@ -68,7 +68,7 @@
 		<scalastyle.maven.plugin.version>0.8.0</scalastyle.maven.plugin.version>
 		<coveralls.maven.plugin.version>3.0.1</coveralls.maven.plugin.version>
 		<coveralls.repoToken>?X?X?XX?</coveralls.repoToken>
-		<akka.version>2.3.10</akka.version>
+		<akka.version>2.4.2</akka.version>
 		<akka.http.version>2.0.2</akka.http.version>
 		<akka.stream.version>2.0.2</akka.stream.version>
 		<typesafe.config.version>1.2.1</typesafe.config.version>
@@ -421,11 +421,6 @@
 			</dependency>
 			<dependency>
 				<groupId>com.typesafe.akka</groupId>
-				<version>${akka.version}</version>
-				<artifactId>akka-persistence-experimental_${scala.minor.version}</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>com.typesafe.akka</groupId>
 				<version>${akka.stream.version}</version>
 				<artifactId>akka-stream-experimental_${scala.minor.version}</artifactId>
 			</dependency>
@@ -442,16 +437,6 @@
 			<dependency>
 				<groupId>com.typesafe.akka</groupId>
 				<version>${akka.version}</version>
-				<artifactId>akka-contrib_${scala.minor.version}</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>com.typesafe.akka</groupId>
-				<version>${akka.version}</version>
-				<artifactId>akka-agent_${scala.minor.version}</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>com.typesafe.akka</groupId>
-				<version>${akka.version}</version>
 				<artifactId>akka-remote_${scala.minor.version}</artifactId>
 			</dependency>
 			<dependency>
@@ -463,11 +448,6 @@
 				<groupId>com.typesafe.akka</groupId>
 				<version>${akka.version}</version>
 				<artifactId>akka-cluster_${scala.minor.version}</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>com.typesafe.akka</groupId>
-				<version>${akka.version}</version>
-				<artifactId>akka-multi-node-testkit_${scala.minor.version}</artifactId>
 			</dependency>
 			<dependency>
 				<groupId>com.typesafe.akka</groupId>
