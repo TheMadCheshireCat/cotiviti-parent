@@ -109,7 +109,6 @@
 		<dispatch.core.version>0.11.2</dispatch.core.version>
 		<nscala.time.version>1.6.0</nscala.time.version>
 		<parboiled.scala.version>1.1.6</parboiled.scala.version>
-		<kryo.serialization.version>0.3.3</kryo.serialization.version>
 		<junit.interface.version>0.11</junit.interface.version>
 		<tototoshi.scala.csv.version>1.2.2</tototoshi.scala.csv.version>
 		<maven.build.helper.plugin.version>1.10</maven.build.helper.plugin.version>
@@ -194,11 +193,6 @@
 				<groupId>com.amazonaws</groupId>
 				<artifactId>amazon-kinesis-client</artifactId>
 				<version>${amazon.kinesis.client.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.github.romix.akka</groupId>
-				<artifactId>akka-kryo-serialization_${scala.minor.version}</artifactId>
-				<version>${kryo.serialization.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.scala-lang</groupId>
