@@ -125,7 +125,14 @@
 		<tika.version>1.13</tika.version>
 		<validation.api.version>1.1.0.Final</validation.api.version>
 		<exception.translator.version>0.2.0</exception.translator.version>
+		<reactive.kafka.version>0.10.0</reactive.kafka.version>
+		<sigar.loader.version>1.6.6-rev002</sigar.loader.version>
 		<jacoco.version>0.7.6.201602180812</jacoco.version>
+		<scala.influxdb.client.version>0.4.5</scala.influxdb.client.version>
+		<scala.chart.version>0.5.0</scala.chart.version>
+		<itextpdf.version>5.5.8</itextpdf.version>
+		<joda.time.version>2.9.2</joda.time.version>
+
 		<jacoco.it.execution.data.file>${project.build.directory}/jacoco-it.exec</jacoco.it.execution.data.file>
 		<jacoco.it.execution.dest.file>${jacoco.it.execution.data.file}</jacoco.it.execution.dest.file>
 		<jacoco.ut.execution.data.file>${project.build.directory}/jacoco-ut.data</jacoco.ut.execution.data.file>
@@ -327,6 +334,39 @@
 				<groupId>com.typesafe.play</groupId>
 				<artifactId>play_${scala.minor.version}</artifactId>
 				<version>${play2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.softwaremill.reactivekafka</groupId>
+				<artifactId>reactive-kafka-core_${scala.minor.version}</artifactId>
+				<version>${reactive.kafka.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.kamon</groupId>
+				<artifactId>sigar-loader</artifactId>
+				<version>${sigar.loader.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.wookietreiber</groupId>
+				<artifactId>scala-chart_${scala.minor.version}</artifactId>
+				<version>${scala.chart.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.paulgoldbaum</groupId>
+				<artifactId>scala-influxdb-client_${scala.minor.version}</artifactId>
+				<version>${scala.influxdb.client.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.itextpdf</groupId>
+				<artifactId>itextpdf</artifactId>
+				<version>${itextpdf.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>joda-time</groupId>
+				<artifactId>joda-time</artifactId>
+				<version>${joda.time.version}</version>
 			</dependency>
 
 			<!-- required for IntegrationSpec -->
