@@ -99,7 +99,6 @@
 		<apache.shiro.version>1.2.3</apache.shiro.version>
 		<scala.csv.version>1.1.2</scala.csv.version>
 		<scalarx.version>0.2.6</scalarx.version>
-		<fusesource.sigar.version>1.6.4</fusesource.sigar.version>
 		<ficus.version>1.1.2</ficus.version>
 		<apache.poi.version>3.13</apache.poi.version>
 		<trove4j.version>3.0.3</trove4j.version>
@@ -223,17 +222,6 @@
 				<groupId>com.scalarx</groupId>
 				<artifactId>scalarx_${scala.minor.version}</artifactId>
 				<version>${scalarx.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.fusesource</groupId>
-				<artifactId>sigar</artifactId>
-				<version>${fusesource.sigar.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.fusesource</groupId>
-				<artifactId>sigar</artifactId>
-				<classifier>native</classifier>
-				<version>${fusesource.sigar.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>net.ceedubs</groupId>
