@@ -344,6 +344,10 @@
 							<exclude>src/test/resources/**</exclude>
 							<exclude>src/main/resources/**</exclude>
 							<exclude>src/main/avro/**</exclude>
+	                                                <exclude>**/.dir-locals.el</exclude>
+	                                                <exclude>**.ensime_cache/</exclude>
+	                                                <exclude>.ensime*</exclude>
+	                                                <exclude>scalastyle_config.xml</exclude>
 						</excludes>
 					</configuration>
 				</plugin>
