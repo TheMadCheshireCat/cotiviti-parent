@@ -957,7 +957,7 @@
 					<artifactId>scala-maven-plugin</artifactId>
 					<version>${scala.maven.plugin.version}</version>
 					<configuration>
-						<scalaVersion>${scala.version}</scalaVersion>
+  					        <scalaCompatVersion>${scala.minor.version}</scalaCompatVersion>
 						<encoding>UTF-8</encoding>
 						<useZincServer>false</useZincServer>
 						<jvmArgs>
