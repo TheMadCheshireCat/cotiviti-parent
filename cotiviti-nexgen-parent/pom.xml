@@ -138,7 +138,7 @@
 		<jacoco.ut.execution.data.file>${project.build.directory}/jacoco-ut.data</jacoco.ut.execution.data.file>
 		<jacoco.ut.execution.dest.file>${jacoco.ut.execution.data.file}</jacoco.ut.execution.dest.file>
 		<jacoco.max.missed.classes>1</jacoco.max.missed.classes>
-		<jacoco.coverage.minimum>.85</jacoco.coverage.minimum>
+		<jacoco.coverage.minimum>.95</jacoco.coverage.minimum>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
