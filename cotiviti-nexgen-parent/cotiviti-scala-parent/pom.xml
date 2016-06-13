@@ -44,6 +44,10 @@
 	</dependencyManagement>
 	<dependencies>
 		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-library</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.scalatest</groupId>
 			<artifactId>scalatest_${scala.minor.version}</artifactId>
 			<scope>test</scope>
@@ -54,9 +58,6 @@
 			<plugin>
 				<groupId>net.alchim31.maven</groupId>
 				<artifactId>scala-maven-plugin</artifactId>
-				<configuration>
-					<scalaCompatVersion>${scala.minor.version}</scalaCompatVersion>
-				</configuration>
 				<executions>
 					<execution>
 						<goals>
@@ -102,9 +103,9 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- <plugin> <groupId>org.scalatest</groupId> <artifactId>scalatest-maven-plugin</artifactId> 
-				</plugin> <plugin> <groupId>org.scoverage</groupId> <artifactId>scoverage-maven-plugin</artifactId> 
-				<executions> <execution> <id>check-scoverage-coverage</id> <phase>test</phase> 
+			<!-- <plugin> <groupId>org.scalatest</groupId> <artifactId>scalatest-maven-plugin</artifactId>
+				</plugin> <plugin> <groupId>org.scoverage</groupId> <artifactId>scoverage-maven-plugin</artifactId>
+				<executions> <execution> <id>check-scoverage-coverage</id> <phase>test</phase>
 				<goals> <goal>check</goal> </goals> </execution> </executions> </plugin> -->
 		</plugins>
 	</build>
