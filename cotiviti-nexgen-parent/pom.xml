@@ -30,7 +30,6 @@
 	<!-- URL for site gen -->
 	<url>${ghe.url.base}/${project.artifactId}</url>
 	<properties>
-		<aether.version>1.1.0</aether.version>
 		<maven.version>3.3.9</maven.version>
 		<pax.url.version>2.4.7</pax.url.version>
 		<sbt-compiler.plugin.version>1.0.0-beta5</sbt-compiler.plugin.version>
@@ -601,47 +600,6 @@
 				<artifactId>spring-test</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
-			<!-- Eclipse Aether Deps for getting stuff from nexus -->
-			<dependency>
-				<groupId>org.eclipse.aether</groupId>
-				<artifactId>aether-api</artifactId>
-				<version>${aether.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.eclipse.aether</groupId>
-				<artifactId>aether-util</artifactId>
-				<version>${aether.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.eclipse.aether</groupId>
-				<artifactId>aether-impl</artifactId>
-				<version>${aether.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.eclipse.aether</groupId>
-				<artifactId>aether-connector-basic</artifactId>
-				<version>${aether.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.eclipse.aether</groupId>
-				<artifactId>aether-transport-file</artifactId>
-				<version>${aether.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.eclipse.aether</groupId>
-				<artifactId>aether-transport-classpath</artifactId>
-				<version>${aether.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.eclipse.aether</groupId>
-				<artifactId>aether-transport-http</artifactId>
-				<version>${aether.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.eclipse.aether</groupId>
-				<artifactId>aether-transport-wagon</artifactId>
-				<version>${aether.version}</version>
-			</dependency>
 			<dependency>
 				<groupId>org.apache.maven</groupId>
 				<artifactId>maven-aether-provider</artifactId>
@@ -819,26 +777,6 @@
 				<groupId>org.apache.maven</groupId>
 				<artifactId>maven-settings-builder</artifactId>
 				<version>${maven.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.maven.wagon</groupId>
-				<artifactId>wagon-ssh</artifactId>
-				<version>${wagon.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.maven.wagon</groupId>
-				<artifactId>wagon-http</artifactId>
-				<version>${wagon.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.maven.wagon</groupId>
-				<artifactId>wagon-provider-api</artifactId>
-				<version>${wagon.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.maven.wagon</groupId>
-				<artifactId>wagon-http-lightweight</artifactId>
-				<version>${wagon.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.ops4j.pax.url</groupId>
