@@ -289,11 +289,6 @@
 			</dependency>
 			<dependency>
 				<groupId>org.apache.maven.wagon</groupId>
-				<artifactId>wagon-ssh</artifactId>
-				<version>${maven.wagon.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.maven.wagon</groupId>
 				<artifactId>wagon-http</artifactId>
 				<version>${maven.wagon.version}</version>
 			</dependency>
