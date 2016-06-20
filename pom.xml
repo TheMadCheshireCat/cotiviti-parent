@@ -15,13 +15,13 @@
     limitations under the License.
 
 -->
-<!-- Copyright (C) 2015 Cotiviti Labs (nexgen.admin@cotiviti.io) Licensed 
-	under the Apache License, Version 2.0 (the "License"); you may not use this 
-	file except in compliance with the License. You may obtain a copy of the 
-	License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by 
-	applicable law or agreed to in writing, software distributed under the License 
-	is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY 
-	KIND, either express or implied. See the License for the specific language 
+<!-- Copyright (C) 2015 Cotiviti Labs (nexgen.admin@cotiviti.io) Licensed
+	under the Apache License, Version 2.0 (the "License"); you may not use this
+	file except in compliance with the License. You may obtain a copy of the
+	License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+	applicable law or agreed to in writing, software distributed under the License
+	is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	KIND, either express or implied. See the License for the specific language
 	governing permissions and limitations under the License. -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -80,7 +80,7 @@
 		<team.group.id>cotiviti</team.group.id>
 		<jenkins.url>https://nexgen-admin.ci.cloudbees.com/job/OSS</jenkins.url>
 
-		<!-- The base URL to nexus. This is for repositories and possibly weird 
+		<!-- The base URL to nexus. This is for repositories and possibly weird
 			stuff we might do to nexus -->
 
 		<ghe.host>github.com</ghe.host>
@@ -90,7 +90,7 @@
 		<!-- The base url of a bitbucket project -->
 		<git.url.base>git@github.com:${team.group.id}</git.url.base>
 
-		<!-- The URL of a given project. This works with inheritence but probably 
+		<!-- The URL of a given project. This works with inheritence but probably
 			not multi-module -->
 		<github.site.plugin.version>0.11</github.site.plugin.version>
 		<git.url>${git.url.base}/${project.artifactId}.git</git.url>
@@ -196,7 +196,7 @@
 		<tag>HEAD</tag>
 	</scm>
 
-	<!-- Currently nothing for site deployments, but that's coming in a future 
+	<!-- Currently nothing for site deployments, but that's coming in a future
 		version -->
 	<distributionManagement>
 		<snapshotRepository>
@@ -414,6 +414,9 @@
 							<exclude>.ensime*</exclude>
 							<exclude>scalastyle_config.xml</exclude>
 						</excludes>
+						<mapping>
+							<bash>SCRIPT_STYLE</bash>
+						</mapping>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -471,8 +474,8 @@
 							<totalLineRate>${test.coverage.percentage.required}</totalLineRate>
 							<packageLineRate>${test.coverage.percentage.required}</packageLineRate>
 							<packageBranchRate>${test.coverage.percentage.required}</packageBranchRate>
-							<!-- <regexes> <regex> <pattern>com.example.reallyimportant.*</pattern> 
-								<branchRate>90</branchRate> <lineRate>80</lineRate> </regex> <regex> <pattern>com.example.boringcode.*</pattern> 
+							<!-- <regexes> <regex> <pattern>com.example.reallyimportant.*</pattern>
+								<branchRate>90</branchRate> <lineRate>80</lineRate> </regex> <regex> <pattern>com.example.boringcode.*</pattern>
 								<branchRate>40</branchRate> <lineRate>30</lineRate> </regex> </regexes> -->
 						</check>
 					</configuration>
@@ -826,16 +829,16 @@
 	</reporting>
 	<profiles>
 		<profile>
-			<!-- This profile will only be executed when maven is run from the m2e 
-				plugin in eclipse, as it is the only entity which sets the `m2e.version` 
-				property. This is here to prevent the annoying warning which comes up when 
-				you run maven outside of an m2e environment. An example of this error is 
-				below. [WARNING] The POM for org.eclipse.m2e:lifecycle-mapping:jar:1.0.0 
-				is missing, no dependency information available [WARNING] Failed to retrieve 
-				plugin descriptor for org.eclipse.m2e:lifecycle-mapping:1.0.0: Plugin org.eclipse.m2e:lifecycle-mapping:1.0.0 
-				or one of its dependencies could not be resolved: Failure to find org.ecli 
-				pse.m2e:lifecycle-mapping:jar:1.0.0 in https://someplace was cached in the 
-				local repository, resolution will not be reattempted until the update int 
+			<!-- This profile will only be executed when maven is run from the m2e
+				plugin in eclipse, as it is the only entity which sets the `m2e.version`
+				property. This is here to prevent the annoying warning which comes up when
+				you run maven outside of an m2e environment. An example of this error is
+				below. [WARNING] The POM for org.eclipse.m2e:lifecycle-mapping:jar:1.0.0
+				is missing, no dependency information available [WARNING] Failed to retrieve
+				plugin descriptor for org.eclipse.m2e:lifecycle-mapping:1.0.0: Plugin org.eclipse.m2e:lifecycle-mapping:1.0.0
+				or one of its dependencies could not be resolved: Failure to find org.ecli
+				pse.m2e:lifecycle-mapping:jar:1.0.0 in https://someplace was cached in the
+				local repository, resolution will not be reattempted until the update int
 				erval of remote-repos has elapsed or updates are forced -->
 			<id>only-eclipse</id>
 			<activation>
@@ -846,7 +849,7 @@
 			<build>
 				<pluginManagement>
 					<plugins>
-						<!--This plugin's configuration is used to store Eclipse m2e settings 
+						<!--This plugin's configuration is used to store Eclipse m2e settings
 							only. It has no influence on the Maven build itself. -->
 						<plugin>
 							<groupId>org.eclipse.m2e</groupId>
