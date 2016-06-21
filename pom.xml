@@ -130,7 +130,7 @@
 		<maven.download.plugin.version>1.2.1</maven.download.plugin.version>
 		<maven.surefire.plugin.version>2.19.1</maven.surefire.plugin.version>
 		<maven.failsafe.plugin.version>2.19.1</maven.failsafe.plugin.version>
-		<kotlin.version>1.0.1-2</kotlin.version>
+		<kotlin.version>1.0.2</kotlin.version>
 		<license.maven.plugin>2.11</license.maven.plugin>
 		<license.cotiviti.email>nexgen.admin@cotiviti.io</license.cotiviti.email>
 		<license.cotiviti.name>Cotiviti Labs</license.cotiviti.name>
@@ -347,7 +347,7 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
-					<artifactId>kotlin-plugin</artifactId>
+					<artifactId>kotlin-maven-plugin</artifactId>
 					<groupId>org.jetbrains.kotlin</groupId>
 					<version>${kotlin.version}</version>
 					<executions>
