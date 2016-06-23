@@ -85,7 +85,7 @@
 		<webjars.rickshaw.version>1.5.0</webjars.rickshaw.version>
 		<specs2.version>2.4.13</specs2.version>
 		<mockito.version>1.10.19</mockito.version>
-		<scalacheck.version>1.12.2</scalacheck.version>
+		<scalacheck.version>1.12.5</scalacheck.version>
 		<scalamock.version>3.2.1</scalamock.version>
 		<logback.version>1.1.2</logback.version>
 		<lambdaworks.jacks.version>2.3.3</lambdaworks.jacks.version>
