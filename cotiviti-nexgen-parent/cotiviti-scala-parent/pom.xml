@@ -29,6 +29,7 @@
 	<properties>
 		<scalatest.maven.plugin.version>1.0</scalatest.maven.plugin.version>
 		<play2.plugin.version>1.0.0-beta3</play2.plugin.version>
+		<scalacheck.instances.version>1.0.0</scalacheck.instances.version>
 		<discipline.version>0.3</discipline.version>
 	</properties>
 
@@ -45,6 +46,11 @@
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
+		<dependency>
+			<groupId>io.cotiviti</groupId>
+			<artifactId>scalacheck-instances-java-stdlib</artifactId>
+			<version>${scalacheck.instances.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.scala-lang</groupId>
 			<artifactId>scala-library</artifactId>
