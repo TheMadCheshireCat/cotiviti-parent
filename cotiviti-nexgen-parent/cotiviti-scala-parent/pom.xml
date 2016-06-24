@@ -66,42 +66,17 @@
 					<dependencies>
 						<dependency>
 							<groupId>io.cotiviti</groupId>
-							<artifactId>cotiviti-license-lib</artifactId>
-							<version>${project.version}</version>
+							<artifactId>cotiviti-license-libs</artifactId>
+							<version>1.0.2</version>
 						</dependency>
 					</dependencies>
 					<groupId>com.mycila</groupId>
 					<artifactId>license-maven-plugin</artifactId>
 					<version>${license.maven.plugin}</version>
 					<configuration>
-						<header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
-						<keywords>
-							<keyword>Copyright</keyword>
-							<keyword>${license.cotiviti.email}</keyword>
-						</keywords>
-						<skipExistingHeaders>true</skipExistingHeaders>
-						<strictCheck>true</strictCheck>
-						<properties>
-							<owner>${license.cotiviti.name}</owner>
-							<email>${license.cotiviti.email}</email>
-						</properties>
-						<excludes>
-							<!-- TODO Fix licensing for .md and avro. -->
-							<exclude>**/*.md</exclude>
-							<exclude>**/LICENSE</exclude>
-							<exclude>**/.*</exclude>
-							<exclude>**/*.txt</exclude>
-							<exclude>src/test/resources/**</exclude>
-							<exclude>src/main/resources/**</exclude>
-							<exclude>src/main/avro/**</exclude>
-							<exclude>**/.dir-locals.el</exclude>
-							<exclude>**.ensime_cache/</exclude>
-							<exclude>.ensime*</exclude>
-							<exclude>scalastyle_config.xml</exclude>
-						</excludes>
-						<headerDefinitions>
-							<headerDefinition>license_maven_plugin/scala_license_definition.xml</headerDefinition>
-						</headerDefinitions>
+            <headerDefinitions>
+              <headerDefinition>license_maven_plugin/scala_license_definition.xml</headerDefinition>
+            </headerDefinitions>
 						<mapping>
 							<scala>SCALADOC_STYLE</scala>
 							<sbt>SCALADOC_STYLE</sbt>
