@@ -28,6 +28,7 @@
 	<description>The root parent for most scala projects.  There are possible sub-types depending on testing requirements.</description>
 	<properties>
 		<play2.plugin.version>1.0.0-beta3</play2.plugin.version>
+		<discipline.version>0.3</discipline.version>
 	</properties>
 
 	<!-- URL for site gen -->
@@ -46,6 +47,11 @@
 		<dependency>
 			<groupId>org.scala-lang</groupId>
 			<artifactId>scala-library</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.typelevel</groupId>
+			<artifactId>discipline_${scala.minor.version}</artifactId>
+			<version>${discipline.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.scalatest</groupId>
