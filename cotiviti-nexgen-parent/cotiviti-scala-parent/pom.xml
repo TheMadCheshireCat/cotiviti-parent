@@ -27,6 +27,7 @@
 	<name>Cotiviti Scala Parent POM</name>
 	<description>The root parent for most scala projects.  There are possible sub-types depending on testing requirements.</description>
 	<properties>
+		<scalatest.maven.plugin.version>1.0</scalatest.maven.plugin.version>
 		<play2.plugin.version>1.0.0-beta3</play2.plugin.version>
 		<discipline.version>0.3</discipline.version>
 	</properties>
@@ -62,6 +63,32 @@
 	<build>
 		<pluginManagement>
 			<plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${maven.surefire.plugin.version}</version>
+        <configuration>
+	        <skipTests>true</skipTests>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.scalatest</groupId>
+        <artifactId>scalatest-maven-plugin</artifactId>
+        <version>${scalatest.maven.plugin.version}</version>
+        <configuration>
+	        <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+	        <junitxml>.</junitxml>
+	        <filereports>WDF TestSuite.txt</filereports>
+        </configuration>
+        <executions>
+	        <execution>
+	          <id>test</id>
+	          <goals>
+	            <goal>test</goal>
+	          </goals>
+	        </execution>
+        </executions>
+      </plugin>
 				<plugin>
 					<dependencies>
 						<dependency>

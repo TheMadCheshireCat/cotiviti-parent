@@ -35,7 +35,6 @@
 		<scoverage.maven.plugin.version>1.1.1</scoverage.maven.plugin.version>
 		<scoverage.scalac.plugin.version>1.1.0</scoverage.scalac.plugin.version>
 		<scoverage.maven.plugin.failOnMinimumCoverage>true</scoverage.maven.plugin.failOnMinimumCoverage>
-		<scalatest.maven.plugin.version>1.0</scalatest.maven.plugin.version>
 		<scala.minor.version>2.11</scala.minor.version>
 		<scala.release>8</scala.release>
 		<logstash.logback.encoder.version>4.3</logstash.logback.encoder.version>
@@ -905,24 +904,6 @@
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>build-helper-maven-plugin</artifactId>
 					<version>${maven.build.helper.plugin.version}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.scalatest</groupId>
-					<artifactId>scalatest-maven-plugin</artifactId>
-					<version>${scalatest.maven.plugin.version}</version>
-					<configuration>
-						<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
-						<junitxml>.</junitxml>
-						<filereports>tests.txt</filereports>
-					</configuration>
-					<executions>
-						<execution>
-							<id>test</id>
-							<goals>
-								<goal>test</goal>
-							</goals>
-						</execution>
-					</executions>
 				</plugin>
 				<plugin>
 					<groupId>net.alchim31.maven</groupId>
