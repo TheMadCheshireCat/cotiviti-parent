@@ -135,7 +135,7 @@
 		<jacoco.ut.execution.dest.file>${jacoco.ut.execution.data.file}</jacoco.ut.execution.dest.file>
 		<jacoco.max.missed.classes>1</jacoco.max.missed.classes>
 		<jacoco.coverage.minimum>.95</jacoco.coverage.minimum>
-		<cotiviti.develtools.version>1.0.0</cotiviti.develtools.version>
+		<cotiviti.develtools.version>1.0.1</cotiviti.develtools.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
