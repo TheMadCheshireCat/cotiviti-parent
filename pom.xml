@@ -165,7 +165,7 @@ limitations under the License.
 		<site.target.url>github:http://cotiviti.github.io/${project.artifactId}/${site.path}</site.target.url>
 		<trajano.wagon.version>2.0.5-SNAPSHOT</trajano.wagon.version>
 
-		<templating.maven.plugin.version>1.0-alpha-3</templating.maven.plugin.version>
+		<templating.maven.plugin.version>1.0.0</templating.maven.plugin.version>
 		<maven.invoker.plugin.version>2.0.0</maven.invoker.plugin.version>
 		<java.semver.version>0.9.0</java.semver.version>
 		<exec.maven.plugin.version>1.4.0</exec.maven.plugin.version>
