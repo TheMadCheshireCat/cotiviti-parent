@@ -937,6 +937,13 @@
 					<groupId>org.scalastyle</groupId>
 					<artifactId>scalastyle-maven-plugin</artifactId>
 					<version>${scalastyle.maven.plugin.version}</version>
+					<dependencies>
+						<dependency>
+							<groupId>io.cotiviti</groupId>
+							<artifactId>cotiviti-develtools-config</artifactId>
+							<version>${cotiviti.develtools.version}</version>
+						</dependency>
+					</dependencies>
 					<configuration>
 						<verbose>false</verbose>
 						<failOnViolation>true</failOnViolation>
@@ -944,7 +951,7 @@
 						<failOnWarning>false</failOnWarning>
 						<sourceDirectory>${basedir}/src/main/scala</sourceDirectory>
 						<testSourceDirectory>${basedir}/src/test/scala</testSourceDirectory>
-						<configLocation>${basedir}/lib/scalastyle_config.xml</configLocation>
+						<configLocation>io/cotiviti/cotiviti-scalastyle.xml</configLocation>
 					</configuration>
 					<executions>
 						<execution>
