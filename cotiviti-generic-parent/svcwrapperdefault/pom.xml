@@ -20,7 +20,7 @@
 	<parent>
 		<groupId>io.cotiviti</groupId>
 		<artifactId>cotiviti-generic-parent</artifactId>
-		<version>0.3.5</version>
+		<version>0.3.6-SNAPSHOT</version>
 	</parent>
 	<packaging>jar</packaging>
 	<artifactId>svcwrapperdefault</artifactId>
