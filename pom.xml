@@ -375,6 +375,11 @@ limitations under the License.
 				<artifactId>aether-transport-wagon</artifactId>
 				<version>${aether.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.codehaus.plexus</groupId>
+				<artifactId>plexus-component-annotations</artifactId>
+				<version>${maven.plexus.component.metadata.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
