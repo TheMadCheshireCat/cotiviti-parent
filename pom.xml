@@ -15,8 +15,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<!-- TODO Put in License here! -->
 
@@ -27,7 +26,7 @@ limitations under the License.
 	<!-- We set the artifactId to be the name of the git repo. No exceptions! -->
 	<artifactId>cotiviti-parent</artifactId>
 
-	<version>0.3.6-SNAPSHOT</version>
+	<version>0.3.6</version>
 
 	<packaging>pom</packaging>
 
@@ -194,7 +193,7 @@ limitations under the License.
 		<connection>scm:git:${git.http.url}</connection>
 		<url>${git.http.url}/tree/${GITHUB.BRANCH}</url>
 		<developerConnection>scm:git:${git.url}</developerConnection>
-		<tag>HEAD</tag>
+		<tag>cotiviti-parent-0.3.6</tag>
 	</scm>
 
 	<!-- Currently nothing for site deployments, but that's coming in a future
