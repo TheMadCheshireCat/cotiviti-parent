@@ -29,7 +29,7 @@
 	<properties>
 		<scalatest.maven.plugin.version>1.0</scalatest.maven.plugin.version>
 		<play2.plugin.version>1.0.0-beta3</play2.plugin.version>
-		<scalacheck.instances.version>1.0.0</scalacheck.instances.version>
+		<scalacheck.instances.version>1.1.0</scalacheck.instances.version>
 		<discipline.version>0.3</discipline.version>
 	</properties>
 
