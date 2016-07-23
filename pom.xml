@@ -65,7 +65,7 @@ limitations under the License.
 	<!-- HERE WE INCLUDE ABOUT A MILLION PROPERTIES TO MAKE OUR LIVES EASIER -->
 	<description>Parent POM for Cotiviti projects</description>
 	<properties>
-		<cotiviti.core.support.version>1.0.0</cotiviti.core.support.version>
+		<cotiviti.core.support.version>2.0.0-SNAPSHOT</cotiviti.core.support.version>
 		<service.lifecycle.api.version>1.0.0</service.lifecycle.api.version>
 		<GITHUB.BRANCH>master</GITHUB.BRANCH>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -219,6 +219,11 @@ limitations under the License.
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>io.cotiviti</groupId>
+				<artifactId>cotiviti-core</artifactId>
+				<version>${cotiviti.core.support.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>com.didisoft</groupId>
 				<artifactId>pgplib</artifactId>
