@@ -15,8 +15,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<!-- TODO Put in License here! -->
 
@@ -27,7 +26,7 @@ limitations under the License.
 	<!-- We set the artifactId to be the name of the git repo. No exceptions! -->
 	<artifactId>cotiviti-parent</artifactId>
 
-	<version>0.3.7-SNAPSHOT</version>
+	<version>0.3.9-SNAPSHOT</version>
 
 	<packaging>pom</packaging>
 
@@ -65,7 +64,8 @@ limitations under the License.
 	<!-- HERE WE INCLUDE ABOUT A MILLION PROPERTIES TO MAKE OUR LIVES EASIER -->
 	<description>Parent POM for Cotiviti projects</description>
 	<properties>
-		<cotiviti.core.support.version>2.0.0-SNAPSHOT</cotiviti.core.support.version>
+		<functional.java.version>4.6</functional.java.version>
+		<cotiviti.core.support.version>2.0.1</cotiviti.core.support.version>
 		<service.lifecycle.api.version>1.0.0</service.lifecycle.api.version>
 		<GITHUB.BRANCH>master</GITHUB.BRANCH>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -173,7 +173,7 @@ limitations under the License.
 		<servicewrapper.artifactId>svcwrapperdefault</servicewrapper.artifactId>
 
 		<site.target.url>github:http://cotiviti.github.io/${project.artifactId}/${site.path}</site.target.url>
-		<trajano.wagon.version>2.0.5-SNAPSHOT</trajano.wagon.version>
+		<trajano.wagon.version>2.0.4</trajano.wagon.version>
 
 		<templating.maven.plugin.version>1.0.0</templating.maven.plugin.version>
 		<maven.invoker.plugin.version>2.0.0</maven.invoker.plugin.version>
@@ -219,6 +219,11 @@ limitations under the License.
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>org.functionaljava</groupId>
+				<artifactId>functionaljava</artifactId>
+				<version>${functional.java.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>io.cotiviti</groupId>
 				<artifactId>cotiviti-core</artifactId>
