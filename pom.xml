@@ -64,7 +64,7 @@ limitations under the License.
 	<!-- HERE WE INCLUDE ABOUT A MILLION PROPERTIES TO MAKE OUR LIVES EASIER -->
 	<description>Parent POM for Cotiviti projects</description>
 	<properties>
-		<cotiviti.core.support.version>2.0.0-SNAPSHOT</cotiviti.core.support.version>
+		<cotiviti.core.support.version>2.0.0</cotiviti.core.support.version>
 		<service.lifecycle.api.version>1.0.0</service.lifecycle.api.version>
 		<GITHUB.BRANCH>master</GITHUB.BRANCH>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -172,7 +172,7 @@ limitations under the License.
 		<servicewrapper.artifactId>svcwrapperdefault</servicewrapper.artifactId>
 
 		<site.target.url>github:http://cotiviti.github.io/${project.artifactId}/${site.path}</site.target.url>
-		<trajano.wagon.version>2.0.5-SNAPSHOT</trajano.wagon.version>
+		<trajano.wagon.version>2.0.4</trajano.wagon.version>
 
 		<templating.maven.plugin.version>1.0.0</templating.maven.plugin.version>
 		<maven.invoker.plugin.version>2.0.0</maven.invoker.plugin.version>
