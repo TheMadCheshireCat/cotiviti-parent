@@ -29,6 +29,7 @@
 	<!-- URL for site gen -->
 	<url>${ghe.url.base}/${project.artifactId}</url>
 	<properties>
+		<claim.model.version>2.0.1</claim.model.version>
 		<maven.version>3.3.9</maven.version>
 		<pax.url.version>2.4.7</pax.url.version>
 		<sbt-compiler.plugin.version>1.0.0-beta5</sbt-compiler.plugin.version>
@@ -137,6 +138,41 @@
 	</properties>
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>io.cotiviti</groupId>
+				<artifactId>claim-model-api</artifactId>
+				<version>${claim.model.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.cotiviti</groupId>
+				<artifactId>claim-model-core</artifactId>
+				<version>${claim.model.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.cotiviti</groupId>
+				<artifactId>claim-model-example</artifactId>
+				<version>${claim.model.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.cotiviti</groupId>
+				<artifactId>claim-model-json-api</artifactId>
+				<version>${claim.model.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.cotiviti</groupId>
+				<artifactId>claim-model-json-std</artifactId>
+				<version>${claim.model.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.cotiviti</groupId>
+				<artifactId>claim-model-json-scala</artifactId>
+				<version>${claim.model.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.cotiviti</groupId>
+				<artifactId>claim-model-scala</artifactId>
+				<version>${claim.model.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>org.scalatra</groupId>
 				<artifactId>scalatra_${scala.minor.version}</artifactId>
