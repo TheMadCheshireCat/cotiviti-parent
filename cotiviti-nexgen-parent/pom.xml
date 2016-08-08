@@ -20,7 +20,7 @@
 	<parent>
 		<groupId>io.cotiviti</groupId>
 		<artifactId>cotiviti-parent</artifactId>
-		<version>0.3.9-SNAPSHOT</version>
+		<version>0.3.10-SNAPSHOT</version>
 	</parent>
 	<packaging>pom</packaging>
 	<artifactId>cotiviti-nexgen-parent</artifactId>
@@ -29,6 +29,7 @@
 	<!-- URL for site gen -->
 	<url>${ghe.url.base}/${project.artifactId}</url>
 	<properties>
+		<claim.model.version>2.0.1</claim.model.version>
 		<maven.version>3.3.9</maven.version>
 		<pax.url.version>2.4.7</pax.url.version>
 		<sbt-compiler.plugin.version>1.0.0-beta5</sbt-compiler.plugin.version>
@@ -38,9 +39,7 @@
 		<scala.minor.version>2.11</scala.minor.version>
 		<scala.release>8</scala.release>
 		<logstash.logback.encoder.version>4.3</logstash.logback.encoder.version>
-
-
-
+		<scalatra.version>2.4.1</scalatra.version>
 		<scala.version>${scala.minor.version}.${scala.release}</scala.version>
 		<scala.xml.version>${scala.minor.version}.0-M4</scala.xml.version>
 		<scala.stack.start.mb>256</scala.stack.start.mb>
@@ -59,7 +58,7 @@
 		<commons.pool.version>1.6</commons.pool.version>
 		<commons.vfs2.version>2.1</commons.vfs2.version>
 		<commons.beanutils.version>1.9.2</commons.beanutils.version>
-
+		<http4s.version>0.14.1a</http4s.version>
 		<mysql.connector.version>6.0.3</mysql.connector.version>
 		<scalastyle.maven.plugin.version>0.8.0</scalastyle.maven.plugin.version>
 		<coveralls.maven.plugin.version>3.0.1</coveralls.maven.plugin.version>
@@ -74,7 +73,7 @@
 		<kamon.version>0.6.1</kamon.version>
 		<slf4j.version>1.7.13</slf4j.version>
 		<sesame.version>2.8.3</sesame.version>
-		<scalaz.version>7.1.7</scalaz.version>
+		<scalaz.version>7.2.4</scalaz.version>
 		<spray.version>1.3.3</spray.version>
 		<spray.json.version>1.3.2</spray.json.version>
 		<webjars.ink.version>3.1.2</webjars.ink.version>
@@ -89,7 +88,7 @@
 		<logback.version>1.1.2</logback.version>
 		<lambdaworks.jacks.version>2.3.3</lambdaworks.jacks.version>
 		<json4s.version>3.2.11</json4s.version>
-		<io.argonaut.version>6.1</io.argonaut.version>
+		<io.argonaut.version>6.1a</io.argonaut.version>
 		<scalaj.http.version>1.1.4</scalaj.http.version>
 		<aspectj.version>1.8.4</aspectj.version>
 		<apache.shiro.version>1.2.3</apache.shiro.version>
@@ -139,6 +138,66 @@
 	</properties>
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>io.cotiviti</groupId>
+				<artifactId>claim-model-api</artifactId>
+				<version>${claim.model.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.cotiviti</groupId>
+				<artifactId>claim-model-core</artifactId>
+				<version>${claim.model.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.cotiviti</groupId>
+				<artifactId>claim-model-example</artifactId>
+				<version>${claim.model.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.cotiviti</groupId>
+				<artifactId>claim-model-json-api</artifactId>
+				<version>${claim.model.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.cotiviti</groupId>
+				<artifactId>claim-model-json-std</artifactId>
+				<version>${claim.model.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.cotiviti</groupId>
+				<artifactId>claim-model-json-scala</artifactId>
+				<version>${claim.model.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.cotiviti</groupId>
+				<artifactId>claim-model-scala</artifactId>
+				<version>${claim.model.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.scalatra</groupId>
+				<artifactId>scalatra_${scala.minor.version}</artifactId>
+				<version>${scalatra.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.http4s</groupId>
+				<artifactId>http4s-core_${scala.minor.version}</artifactId>
+				<version>${http4s.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.http4s</groupId>
+				<artifactId>http4s-blaze-core_${scala.minor.version}</artifactId>
+				<version>${http4s.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.http4s</groupId>
+				<artifactId>http4s-blaze-client_${scala.minor.version}</artifactId>
+				<version>${http4s.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.http4s</groupId>
+				<artifactId>http4s-client_${scala.minor.version}</artifactId>
+				<version>${http4s.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>io.cotiviti</groupId>
 				<artifactId>cotiviti-develtools-config</artifactId>
