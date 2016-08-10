@@ -29,7 +29,7 @@
 	<!-- URL for site gen -->
 	<url>${ghe.url.base}/${project.artifactId}</url>
 	<properties>
-		<claim.model.version>2.0.1</claim.model.version>
+		<claim.model.version>2.0.2</claim.model.version>
 		<maven.version>3.3.9</maven.version>
 		<pax.url.version>2.4.7</pax.url.version>
 		<sbt-compiler.plugin.version>1.0.0-beta5</sbt-compiler.plugin.version>
