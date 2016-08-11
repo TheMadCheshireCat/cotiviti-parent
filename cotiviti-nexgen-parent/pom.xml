@@ -747,7 +747,11 @@
 				<artifactId>scalaz-core_${scala.minor.version}</artifactId>
 				<version>${scalaz.version}</version>
 			</dependency>
-
+			<dependency>
+				<groupId>org.scalaz</groupId>
+				<artifactId>scalaz-concurrent_${scala.minor.version}</artifactId>
+				<version>${scalaz.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>io.spray</groupId>
 				<artifactId>spray-json_${scala.minor.version}</artifactId>
