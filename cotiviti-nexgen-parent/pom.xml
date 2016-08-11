@@ -20,7 +20,7 @@
 	<parent>
 		<groupId>io.cotiviti</groupId>
 		<artifactId>cotiviti-parent</artifactId>
-		<version>0.3.11-SNAPSHOT</version>
+		<version>0.3.12-SNAPSHOT</version>
 	</parent>
 	<packaging>pom</packaging>
 	<artifactId>cotiviti-nexgen-parent</artifactId>

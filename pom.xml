@@ -26,7 +26,7 @@ limitations under the License.
 	<!-- We set the artifactId to be the name of the git repo. No exceptions! -->
 	<artifactId>cotiviti-parent</artifactId>
 
-	<version>0.3.11-SNAPSHOT</version>
+	<version>0.3.12-SNAPSHOT</version>
 
 	<packaging>pom</packaging>
 
