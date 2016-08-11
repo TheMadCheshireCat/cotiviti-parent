@@ -145,17 +145,17 @@
 			<dependency>
 				<groupId>io.cotiviti</groupId>
 				<artifactId>cotiviti-scalaz-instances</artifactId>
-				<version>${cotiviti.scalaz.instances}</version>
+				<version>${cotiviti.scalaz.instances.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>io.cotiviti</groupId>
 				<artifactId>cotiviti-scalaz-instances-discipline</artifactId>
-				<version>${cotiviti.scalaz.instances}</version>
+				<version>${cotiviti.scalaz.instances.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>io.cotiviti</groupId>
 				<artifactId>cotiviti-scalaz-instances-java-stdlib</artifactId>
-				<version>${cotiviti.scalaz.instances}</version>
+				<version>${cotiviti.scalaz.instances.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>io.cotiviti</groupId>
