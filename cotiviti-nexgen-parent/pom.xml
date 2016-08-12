@@ -219,7 +219,7 @@
 			</dependency>
 			<dependency>
 				<groupId>io.cotiviti</groupId>
-				<artifactId>claim-model-json-scala</artifactId>
+				<artifactId>claim-model-json-std-scala</artifactId>
 				<version>${claim.model.version}</version>
 			</dependency>
 			<dependency>
