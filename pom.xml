@@ -1,21 +1,22 @@
-<!--
-
-Copyright (C) 2015 Cotiviti Labs (nexgen.admin@cotiviti.io)
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
--->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<!-- Copyright © 2015 Cotiviti Labs (nexgen.admin@cotiviti.io) The software 
+	code contained herein is the property of Cotiviti Corporation and its subsidiaries 
+	and affiliates (collectively, “Cotiviti”). Access to this software code is 
+	being provided to you in the course of your employment or affiliation with 
+	Cotiviti and may be used solely in the scope and course of your work for 
+	Cotiviti, and is for internal Cotiviti use only. Any unauthorized use, disclosure, 
+	copying, distribution, destruction of this software code, or the taking of 
+	any unauthorized action in reliance on this software code, is strictly prohibited. 
+	If this information is viewed in error, immediately discontinue use of the 
+	application. Anyone using this software code and the applications will be 
+	subject to monitoring for improper use, system maintenance and security purposes, 
+	and is advised that if such monitoring reveals possible criminal activity 
+	or policy violation, Cotiviti personnel may provide the evidence of such 
+	monitoring to law enforcement or other officials, and the user may be subject 
+	to disciplinary action by Cotiviti, up to and including termination of employment. 
+	Use of this software code and any applications and information therein constitutes 
+	acknowledgement of and consent to this notice -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<!-- TODO Put in License here! -->
 
@@ -67,7 +68,7 @@ limitations under the License.
 		<surefire.failIfNoTests>true</surefire.failIfNoTests>
 		<aws.sdk.version>1.11.26</aws.sdk.version>
 		<functional.java.version>4.6</functional.java.version>
-		<cotiviti.core.support.version>2.0.1</cotiviti.core.support.version>
+		<cotiviti.core.support.version>2.0.4</cotiviti.core.support.version>
 		<service.lifecycle.api.version>1.0.0</service.lifecycle.api.version>
 		<GITHUB.BRANCH>master</GITHUB.BRANCH>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -76,8 +77,8 @@ limitations under the License.
 		<team.group.id>cotiviti</team.group.id>
 		<jenkins.url>https://nexgen-admin.ci.cloudbees.com/job/OSS</jenkins.url>
 
-		<!-- The base URL to nexus. This is for repositories and possibly weird
-				 stuff we might do to nexus -->
+		<!-- The base URL to nexus. This is for repositories and possibly weird 
+			stuff we might do to nexus -->
 
 		<ghe.host>github.com</ghe.host>
 		<!-- The base URL for projects of our team on GitHub -->
@@ -86,8 +87,8 @@ limitations under the License.
 		<!-- The base url of a bitbucket project -->
 		<git.url.base>git@github.com:${team.group.id}</git.url.base>
 
-		<!-- The URL of a given project. This works with inheritence but probably
-				 not multi-module -->
+		<!-- The URL of a given project. This works with inheritence but probably 
+			not multi-module -->
 		<github.site.plugin.version>0.11</github.site.plugin.version>
 		<git.url>${git.url.base}/${project.artifactId}.git</git.url>
 		<git.http.url>${ghe.url.base}/${project.artifactId}</git.http.url>
@@ -109,12 +110,12 @@ limitations under the License.
 		<maven.pax.plugin.version>1.5</maven.pax.plugin.version>
 		<maven.bundle.plugin.version>2.3.4</maven.bundle.plugin.version>
 		<maven.archetype.plugin.version>2.2</maven.archetype.plugin.version>
-		<maven.exec.plugin.version>1.4.0</maven.exec.plugin.version>
+		<maven.exec.plugin.version>1.5.0</maven.exec.plugin.version>
 		<maven.dependency.plugin.version>2.10</maven.dependency.plugin.version>
 		<maven.clean.plugin.version>3.0.0</maven.clean.plugin.version>
 		<maven.versions.plugin.version>2.1</maven.versions.plugin.version>
-		<maven.site.plugin.version>3.4</maven.site.plugin.version>
-		<maven.site.markdown.version>1.6</maven.site.markdown.version>
+		<maven.site.plugin.version>3.5.1</maven.site.plugin.version>
+		<mavne.site.doxia.model.version>1.7</mavne.site.doxia.model.version>
 		<maven.project.report.plugin.version>2.8</maven.project.report.plugin.version>
 		<maven.enforcer.plugin.version>1.4</maven.enforcer.plugin.version>
 		<maven.javadoc.plugin.version>2.10.3</maven.javadoc.plugin.version>
@@ -143,7 +144,8 @@ limitations under the License.
 		<maven.project.version>2.2.1</maven.project.version>
 		<apache.ant.version>1.9.7</apache.ant.version>
 		<kotlin.version>1.0.2</kotlin.version>
-		<license.maven.plugin>2.11</license.maven.plugin>
+		<license.maven.plugin>3.0.rc1</license.maven.plugin>
+		<cotiviti.core.license.version>2.0.3</cotiviti.core.license.version>
 		<license.cotiviti.email>nexgen.admin@cotiviti.io</license.cotiviti.email>
 		<license.cotiviti.name>Cotiviti Labs</license.cotiviti.name>
 		<redline.maven.plugin.version>0.0.7</redline.maven.plugin.version>
@@ -201,8 +203,8 @@ limitations under the License.
 		<tag>HEAD</tag>
 	</scm>
 
-	<!-- Currently nothing for site deployments, but that's coming in a future
-			 version -->
+	<!-- Currently nothing for site deployments, but that's coming in a future 
+		version -->
 	<distributionManagement>
 		<snapshotRepository>
 			<id>cotiviti_ossrh</id>
@@ -213,9 +215,8 @@ limitations under the License.
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
 		<site>
-			<id>githubsite</id>
-			<name>GitHub Pages</name>
-			<url>github:http://${team.group.id}.github.io/cotiviti-parent/site/${project.version}/</url>
+			<id>nexus</id>
+			<url>dav:${nexus.site.url}/nexus/content/sites/${project.groupId}/${project.artifactId}/${project.version}</url>
 		</site>
 	</distributionManagement>
 
@@ -478,7 +479,7 @@ limitations under the License.
 						</execution>
 					</executions>
 					<configuration>
-						<header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
+						<header>com/mycila/maven/plugin/license/templates/COTIVITI.txt</header>
 						<keywords>
 							<keyword>Copyright</keyword>
 							<keyword>${license.cotiviti.email}</keyword>
@@ -507,6 +508,13 @@ limitations under the License.
 							<bash>SCRIPT_STYLE</bash>
 						</mapping>
 					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>io.cotiviti</groupId>
+							<artifactId>cotiviti-core-license</artifactId>
+							<version>${cotiviti.core.license.version}</version>
+						</dependency>
+					</dependencies>
 				</plugin>
 				<plugin>
 					<groupId>org.jacoco</groupId>
@@ -535,12 +543,32 @@ limitations under the License.
 						<dependency>
 							<groupId>org.apache.maven.doxia</groupId>
 							<artifactId>doxia-module-markdown</artifactId>
-							<version>${maven.site.markdown.version}</version>
+							<version>${mavne.site.doxia.model.version}</version>
 						</dependency>
 						<dependency>
-							<groupId>net.trajano.wagon.iht</groupId>
-							<artifactId>wagon-git</artifactId>
-							<version>${trajano.wagon.version}</version>
+							<groupId>org.apache.maven.doxia</groupId>
+							<artifactId>doxia-module-fml</artifactId>
+							<version>${mavne.site.doxia.model.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.maven.doxia</groupId>
+							<artifactId>doxia-module-latex</artifactId>
+							<version>${mavne.site.doxia.model.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.maven.doxia</groupId>
+							<artifactId>doxia-module-apt</artifactId>
+							<version>${mavne.site.doxia.model.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.maven.doxia</groupId>
+							<artifactId>doxia-module-xdoc</artifactId>
+							<version>${mavne.site.doxia.model.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.maven.wagon</groupId>
+							<artifactId>wagon-webdav-jackrabbit</artifactId>
+							<version>${maven.wagon.version}</version>
 						</dependency>
 					</dependencies>
 				</plugin>
@@ -563,9 +591,9 @@ limitations under the License.
 							<totalLineRate>${test.coverage.percentage.required}</totalLineRate>
 							<packageLineRate>${test.coverage.percentage.required}</packageLineRate>
 							<packageBranchRate>${test.coverage.percentage.required}</packageBranchRate>
-							<!-- <regexes> <regex> <pattern>com.example.reallyimportant.*</pattern>
-									 <branchRate>90</branchRate> <lineRate>80</lineRate> </regex> <regex> <pattern>com.example.boringcode.*</pattern>
-									 <branchRate>40</branchRate> <lineRate>30</lineRate> </regex> </regexes> -->
+							<!-- <regexes> <regex> <pattern>com.example.reallyimportant.*</pattern> 
+								<branchRate>90</branchRate> <lineRate>80</lineRate> </regex> <regex> <pattern>com.example.boringcode.*</pattern> 
+								<branchRate>40</branchRate> <lineRate>30</lineRate> </regex> </regexes> -->
 						</check>
 					</configuration>
 
@@ -787,19 +815,19 @@ limitations under the License.
 		</testResources>
 		<plugins>
 			<!-- <plugin> -->
-			<!--		<groupId>com.mycila</groupId> -->
-			<!--		<artifactId>license-maven-plugin</artifactId> -->
-			<!--		<executions> -->
-			<!--			<execution> -->
-			<!--				<configuration> -->
-			<!--					<dryRun>false</dryRun> -->
-			<!--				</configuration> -->
-			<!--				<phase>validate</phase> -->
-			<!--				<goals> -->
-			<!--					<goal>format</goal> -->
-			<!--				</goals> -->
-			<!--			</execution> -->
-			<!--		</executions> -->
+			<!-- <groupId>com.mycila</groupId> -->
+			<!-- <artifactId>license-maven-plugin</artifactId> -->
+			<!-- <executions> -->
+			<!-- <execution> -->
+			<!-- <configuration> -->
+			<!-- <dryRun>false</dryRun> -->
+			<!-- </configuration> -->
+			<!-- <phase>validate</phase> -->
+			<!-- <goals> -->
+			<!-- <goal>format</goal> -->
+			<!-- </goals> -->
+			<!-- </execution> -->
+			<!-- </executions> -->
 			<!-- </plugin> -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -919,17 +947,17 @@ limitations under the License.
 	</reporting>
 	<profiles>
 		<profile>
-			<!-- This profile will only be executed when maven is run from the m2e
-					 plugin in eclipse, as it is the only entity which sets the `m2e.version`
-					 property. This is here to prevent the annoying warning which comes up when
-					 you run maven outside of an m2e environment. An example of this error is
-					 below. [WARNING] The POM for org.eclipse.m2e:lifecycle-mapping:jar:1.0.0
-					 is missing, no dependency information available [WARNING] Failed to retrieve
-					 plugin descriptor for org.eclipse.m2e:lifecycle-mapping:1.0.0: Plugin org.eclipse.m2e:lifecycle-mapping:1.0.0
-					 or one of its dependencies could not be resolved: Failure to find org.ecli
-					 pse.m2e:lifecycle-mapping:jar:1.0.0 in https://someplace was cached in the
-					 local repository, resolution will not be reattempted until the update int
-					 erval of remote-repos has elapsed or updates are forced -->
+			<!-- This profile will only be executed when maven is run from the m2e 
+				plugin in eclipse, as it is the only entity which sets the `m2e.version` 
+				property. This is here to prevent the annoying warning which comes up when 
+				you run maven outside of an m2e environment. An example of this error is 
+				below. [WARNING] The POM for org.eclipse.m2e:lifecycle-mapping:jar:1.0.0 
+				is missing, no dependency information available [WARNING] Failed to retrieve 
+				plugin descriptor for org.eclipse.m2e:lifecycle-mapping:1.0.0: Plugin org.eclipse.m2e:lifecycle-mapping:1.0.0 
+				or one of its dependencies could not be resolved: Failure to find org.ecli 
+				pse.m2e:lifecycle-mapping:jar:1.0.0 in https://someplace was cached in the 
+				local repository, resolution will not be reattempted until the update int 
+				erval of remote-repos has elapsed or updates are forced -->
 			<id>only-eclipse</id>
 			<activation>
 				<property>
@@ -939,8 +967,8 @@ limitations under the License.
 			<build>
 				<pluginManagement>
 					<plugins>
-						<!--This plugin's configuration is used to store Eclipse m2e settings
-								only. It has no influence on the Maven build itself. -->
+						<!--This plugin's configuration is used to store Eclipse m2e settings 
+							only. It has no influence on the Maven build itself. -->
 						<plugin>
 							<groupId>org.eclipse.m2e</groupId>
 							<artifactId>lifecycle-mapping</artifactId>
