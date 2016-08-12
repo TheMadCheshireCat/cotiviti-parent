@@ -20,7 +20,7 @@
 	<parent>
 		<groupId>io.cotiviti</groupId>
 		<artifactId>cotiviti-parent</artifactId>
-		<version>0.3.12-SNAPSHOT</version>
+		<version>0.3.13-SNAPSHOT</version>
 	</parent>
 	<packaging>pom</packaging>
 	<artifactId>cotiviti-nexgen-parent</artifactId>
@@ -145,17 +145,17 @@
 			<dependency>
 				<groupId>io.cotiviti</groupId>
 				<artifactId>cotiviti-scalaz-instances</artifactId>
-				<version>${cotiviti.scalaz.instances}</version>
+				<version>${cotiviti.scalaz.instances.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>io.cotiviti</groupId>
 				<artifactId>cotiviti-scalaz-instances-discipline</artifactId>
-				<version>${cotiviti.scalaz.instances}</version>
+				<version>${cotiviti.scalaz.instances.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>io.cotiviti</groupId>
 				<artifactId>cotiviti-scalaz-instances-java-stdlib</artifactId>
-				<version>${cotiviti.scalaz.instances}</version>
+				<version>${cotiviti.scalaz.instances.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>io.cotiviti</groupId>
@@ -219,7 +219,7 @@
 			</dependency>
 			<dependency>
 				<groupId>io.cotiviti</groupId>
-				<artifactId>claim-model-json-scala</artifactId>
+				<artifactId>claim-model-json-std-scala</artifactId>
 				<version>${claim.model.version}</version>
 			</dependency>
 			<dependency>
@@ -747,7 +747,11 @@
 				<artifactId>scalaz-core_${scala.minor.version}</artifactId>
 				<version>${scalaz.version}</version>
 			</dependency>
-
+			<dependency>
+				<groupId>org.scalaz</groupId>
+				<artifactId>scalaz-concurrent_${scala.minor.version}</artifactId>
+				<version>${scalaz.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>io.spray</groupId>
 				<artifactId>spray-json_${scala.minor.version}</artifactId>
@@ -1090,7 +1094,7 @@
 							<goals>
 								<goal>check</goal>
 							</goals>
-							<phase>install</phase>
+							<phase>verify</phase>
 						</execution>
 					</executions>
 				</plugin>
