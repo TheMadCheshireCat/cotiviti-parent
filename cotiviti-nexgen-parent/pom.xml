@@ -20,7 +20,7 @@
 	<parent>
 		<groupId>io.cotiviti</groupId>
 		<artifactId>cotiviti-parent</artifactId>
-		<version>0.3.13-SNAPSHOT</version>
+		<version>0.4.0-SNAPSHOT</version>
 	</parent>
 	<packaging>pom</packaging>
 	<artifactId>cotiviti-nexgen-parent</artifactId>
@@ -131,7 +131,7 @@
 		<scala.chart.version>0.5.0</scala.chart.version>
 		<itextpdf.version>5.5.8</itextpdf.version>
 		<joda.time.version>2.9.2</joda.time.version>
-
+		<jacoco.skip>false</jacoco.skip>
 		<jacoco.it.execution.data.file>${project.build.directory}/jacoco-it.exec</jacoco.it.execution.data.file>
 		<jacoco.it.execution.dest.file>${jacoco.it.execution.data.file}</jacoco.it.execution.dest.file>
 		<jacoco.ut.execution.data.file>${project.build.directory}/jacoco-ut.data</jacoco.ut.execution.data.file>
@@ -927,6 +927,7 @@
 						<destFile>${jacoco.ut.execution.dest.file}</destFile>
 						<dataFile>${jacoco.ut.execution.data.file}</dataFile>
 						<outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
+						<skip>${jacoco.skip}</skip>
 					</configuration>
 					<executions>
 						<execution>
@@ -1109,6 +1110,10 @@
 			</plugins>
 		</pluginManagement>
 		<plugins>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+			</plugin>
 		</plugins>
 	</build>
 	<modules>
