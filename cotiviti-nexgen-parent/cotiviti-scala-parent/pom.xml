@@ -20,13 +20,14 @@
 	<parent>
 		<groupId>io.cotiviti</groupId>
 		<artifactId>cotiviti-nexgen-parent</artifactId>
-		<version>0.3.13-SNAPSHOT</version>
+		<version>0.4.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>cotiviti-scala-parent</artifactId>
 	<packaging>pom</packaging>
 	<name>Cotiviti Scala Parent POM</name>
 	<description>The root parent for most scala projects.  There are possible sub-types depending on testing requirements.</description>
 	<properties>
+		<jacoco.skip>true</jacoco.skip>
 		<scalatest.maven.plugin.version>1.0</scalatest.maven.plugin.version>
 		<play2.plugin.version>1.0.0-beta3</play2.plugin.version>
 	</properties>
@@ -107,6 +108,10 @@
 			</plugins>
 		</pluginManagement>
 		<plugins>
+			<plugin>
+				<groupId>org.scoverage</groupId>
+				<artifactId>scoverage-maven-plugin</artifactId>
+			</plugin>
 			<plugin>
 				<groupId>net.alchim31.maven</groupId>
 				<artifactId>scala-maven-plugin</artifactId>

@@ -20,7 +20,7 @@
 	<parent>
 		<groupId>io.cotiviti</groupId>
 		<artifactId>cotiviti-nexgen-parent</artifactId>
-		<version>0.3.13-SNAPSHOT</version>
+		<version>0.4.0-SNAPSHOT</version>
 	</parent>
 	<packaging>pom</packaging>
 	<artifactId>cotiviti-rpms-parent</artifactId>
@@ -74,7 +74,7 @@
 							</includes>
 						</mappingDefaults>
 						<baseMappings>
-							<!-- FIXME currently a file must be copied to the dir in order to 
+							<!-- FIXME currently a file must be copied to the dir in order to
 								add it to the rpm -->
 							<mapping>
 								<directory>/var/run/${servicewrapper.artifactId}/</directory>
@@ -108,7 +108,7 @@
 					<artifactId>servicewrapper-maven-plugin</artifactId>
 					<configuration>
 						<tanukisoftJSW>
-							<application>	<!-- This is here so that we can set the execution in the parent pom. Needs 
+							<application>	<!-- This is here so that we can set the execution in the parent pom. Needs
 									to be parameterized and fully configured still... -->
 								<name>fakename</name>
 							</application>
@@ -118,13 +118,13 @@
 							</env>
 
 							<java>
-								<!--  Setting the java executable is a pain.  Just set java home and be done with it 
+								<!--  Setting the java executable is a pain.  Just set java home and be done with it
 										unless you've got a really weird java executable -->
 								<!-- <command>
 									<command>
 										<directory>%JAVA_HOME%/bin</directory>
 										<file>java</file>
-									</command> 
+									</command>
 								</command> -->
 								<classPath>
 									<entries>
@@ -301,19 +301,19 @@
 						</goals>
 						<configuration>
 							<tanukisoftJSW>
-								<!-- <wrapperConf>../conf/${project.artifactId}.conf</wrapperConf> 
+								<!-- <wrapperConf>../conf/${project.artifactId}.conf</wrapperConf>
 									<env> <BOOTSTRAP_SERVERS>${bootstrap.servers}</BOOTSTRAP_SERVERS> </env> -->
 								<java>
-									<!-- <classPath> <entries> <entry> <directory>../lib</directory> 
-										<file>*.jar</file> </entry> <entry> <directory>../classes</directory> </entry> 
+									<!-- <classPath> <entries> <entry> <directory>../lib</directory>
+										<file>*.jar</file> </entry> <entry> <directory>../classes</directory> </entry>
 										</entries> <missingLogLevel>INFO</missingLogLevel> </classPath> -->
 									<initMemory>2000</initMemory>
 									<maxMemoryPercent>85</maxMemoryPercent>
-									<!-- <libraries> <libraryPaths> <libraryPath> <directory>../lib</directory> 
-										</libraryPath> </libraryPaths> </libraries> <additionals> <additional> <parameter>-server</parameter> 
-										</additional> <additional> <parameter>-agentlib:TakipiAgent</parameter> </additional> 
-										<additional> <parameter>-Dtakipi.name=${project.artifactId}-${project.version}</parameter> 
-										</additional> <additional> <parameter>-Dtakipi.sources.path=</parameter> 
+									<!-- <libraries> <libraryPaths> <libraryPath> <directory>../lib</directory>
+										</libraryPath> </libraryPaths> </libraries> <additionals> <additional> <parameter>-server</parameter>
+										</additional> <additional> <parameter>-agentlib:TakipiAgent</parameter> </additional>
+										<additional> <parameter>-Dtakipi.name=${project.artifactId}-${project.version}</parameter>
+										</additional> <additional> <parameter>-Dtakipi.sources.path=</parameter>
 										</additional> </additionals> -->
 								</java>
 								<parameters>

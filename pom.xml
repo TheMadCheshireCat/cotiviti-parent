@@ -26,7 +26,7 @@ limitations under the License.
 	<!-- We set the artifactId to be the name of the git repo. No exceptions! -->
 	<artifactId>cotiviti-parent</artifactId>
 
-	<version>0.3.13-SNAPSHOT</version>
+	<version>0.4.0-SNAPSHOT</version>
 
 	<packaging>pom</packaging>
 
@@ -64,6 +64,7 @@ limitations under the License.
 	<!-- HERE WE INCLUDE ABOUT A MILLION PROPERTIES TO MAKE OUR LIVES EASIER -->
 	<description>Parent POM for Cotiviti projects</description>
 	<properties>
+		<surefire.failIfNoTests>true</surefire.failIfNoTests>
 		<aws.sdk.version>1.11.26</aws.sdk.version>
 		<functional.java.version>4.6</functional.java.version>
 		<cotiviti.core.support.version>2.0.1</cotiviti.core.support.version>
@@ -647,6 +648,7 @@ limitations under the License.
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>${maven.surefire.plugin.version}</version>
 					<configuration>
+						<failIfNoTests>${surefire.failIfNoTests}</failIfNoTests>
 						<skipTests>false</skipTests>
 					</configuration>
 				</plugin>
