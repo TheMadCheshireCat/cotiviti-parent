@@ -496,7 +496,6 @@
 				<groupId>org.apache.httpcomponents</groupId>
 				<artifactId>httpclient</artifactId>
 				<version>${apache.httpclient.version}</version>
-				<scope>test</scope>
 			</dependency>
 
 			<dependency>
