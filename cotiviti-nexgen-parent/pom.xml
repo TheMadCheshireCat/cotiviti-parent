@@ -40,7 +40,7 @@
 		<cotiviti.argonaut.codecs.version>3.0.0</cotiviti.argonaut.codecs.version>
 		<scalacheck.instances.version>1.1.0</scalacheck.instances.version>
 		<discipline.version>0.3</discipline.version>
-		<claim.model.version>3.0.0</claim.model.version>
+		<claim.model.version>3.0.1</claim.model.version>
 		<maven.version>3.3.9</maven.version>
 		<pax.url.version>2.4.7</pax.url.version>
 		<sbt-compiler.plugin.version>1.0.0-beta5</sbt-compiler.plugin.version>
