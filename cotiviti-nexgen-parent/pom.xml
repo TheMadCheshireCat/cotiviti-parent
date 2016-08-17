@@ -36,6 +36,7 @@
 	<!-- URL for site gen -->
 	<url>${ghe.url.base}/${project.artifactId}</url>
 	<properties>
+		<apache.commons.codec.version>1.10</apache.commons.codec.version>
 		<cotiviti.scalaz.instances.version>3.0.0</cotiviti.scalaz.instances.version>
 		<cotiviti.argonaut.codecs.version>3.0.0</cotiviti.argonaut.codecs.version>
 		<scalacheck.instances.version>1.1.0</scalacheck.instances.version>
@@ -154,6 +155,11 @@
 				<groupId>org.scodec</groupId>
 				<artifactId>scodec-bits_2.11</artifactId>
 				<version>${scodec.bits.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+				<version>${apache.commons.codec.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>io.cotiviti</groupId>
